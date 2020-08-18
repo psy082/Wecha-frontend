@@ -39,7 +39,7 @@
 
 1. 초기 세팅된 git repository clone하기
 
-`git clone https://github.com/wecode-bootcamp-korea/11-React-Westagram-1.git`
+`git clone https://github.com/wecode-bootcamp-korea/11-WeCha-frontend.git`
 
 2. master branch에서 자신만의 브랜치 만들고 checkout하기
 
