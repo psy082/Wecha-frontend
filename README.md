@@ -41,11 +41,11 @@
 
 `git clone https://github.com/wecode-bootcamp-korea/11-WeCha-frontend.git`
 
-2. master branch에서 자신만의 브랜치 만들고 checkout하기
+2. master branch에서 feature 브랜치 만들고 checkout하기
 
-`git branch feature/자기 이름`
+`git branch feature/페이지 or 기능`
 
-`git checkout feature/자기 이름`
+`git checkout feature/페이지 or 기능`
 
 3. <i><b>자기 브랜치에서만 작업하기(Master는 신성불가침의 영역이라고 합니다 하하)</b></i>
 
@@ -59,9 +59,9 @@
 
 `git pull origin master`
 
-7. feature/자기이름 브랜치로 다시 이동해서 master branch merge하기
+7. feature 브랜치로 다시 이동해서 master branch merge하기
 
-`git checkout feature/자기 이름`
+`git checkout feature/페이지 or 기능`
 
 `git merge master`
 
@@ -69,9 +69,9 @@
 
 `git add .`
 
-`git commit -m "[자기 이름] ADD : 적용된 내용"`
+`git commit -m "ADD : 적용된 내용"`
 
-`git push origin feature/자기 이름`
+`git push origin feature/페이지 or 기능`
 
 9. github에서 PR(Pull Request) 보내기
 
@@ -85,7 +85,7 @@
 
 3. <i><b>커밋 메세지 가이드라인 지키기</b></i>
 
-`git commit -m "[자기 이름] ADD : 적용된 내용"`
+`git commit -m "ADD : 적용된 내용"`
 
 [참고) Commit Message Guidelines](https://www.notion.so/Commit-Message-Guidelines-8ca8fac8178943e78ddcfb48f47ba973)
 
