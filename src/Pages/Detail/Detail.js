@@ -18,11 +18,27 @@ export default class Detail extends Component {
             <HeaderPanelContainer />
           </header>
           <div className="DetailWrapper">
-            <main className="DetailMain">
+            <div className="DetailItem">
               <ContentsContainer></ContentsContainer>
               <ContentsContainer></ContentsContainer>
-            </main>
-            <aside className="DetailAside"></aside>
+            </div>
+            <div className="DetailItem">
+              <div className="ContentsMedia">
+                <div className="MediaItem"></div>
+                <div className="MediaItem"></div>
+                <div className="MediaItem"></div>
+              </div>
+            </div>
+            <div className="DetailItem">
+              <div className="Recommendation">
+                <div className="collection">
+                  <ContentsContainer></ContentsContainer>
+                </div>
+                <div className="recommendedMovies">
+                  <ContentsContainer></ContentsContainer>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <Footer />
