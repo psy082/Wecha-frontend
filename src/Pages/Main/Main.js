@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
-import Login from "../Modal/Login";
-import Footer from "../../Components/Footer/Footer";
 import "./Main.scss";
 
 export default class Main extends Component {
@@ -9,9 +7,7 @@ export default class Main extends Component {
     return (
       <div className="Main">
         <Nav />
-        <div className="contents">
-          <Login />
-        </div>
+        <div className="contents"></div>
       </div>
     );
   }

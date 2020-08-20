@@ -17,15 +17,15 @@ export default class Nav extends Component {
               </a>
             </li>
             <li className="movie">
-              <button className="movieBtn" name="movieBtn">
+              <button className="btnMovie" name="btnMovie">
                 영화
               </button>
             </li>
             <li className="tv">
-              <button className="tvBtn">TV 프로그램</button>
+              <button className="btnTv">TV 프로그램</button>
             </li>
             <li className="book">
-              <button className="bookBtn">책</button>
+              <button className="btnBook">책</button>
             </li>
           </ul>
           <ul className="navRight">
@@ -38,15 +38,15 @@ export default class Nav extends Component {
                     type="search"
                     placeholder="작품 제목, 배우, 감독을 검색해보세요."
                     autoComplete="off"
-                  ></input>
+                  />
                 </div>
               </div>
             </li>
             <li className="login">
-              <button className="loginBtn">로그인</button>
+              <button className="btnLogin">로그인</button>
             </li>
             <li className="signUp">
-              <button className="signUpBtn">회원가입</button>
+              <button className="btnSighUp">회원가입</button>
             </li>
           </ul>
         </div>
