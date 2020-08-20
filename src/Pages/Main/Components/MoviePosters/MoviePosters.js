@@ -19,33 +19,24 @@ export default class MoviePosters extends Component {
         });
       });
   };
+
   render() {
     return (
       <div className="MoviePosters">
         <ul className="moviePoster">
-          {this.state.data.map(
-            ({
-              id,
-              korean_title,
-              poster_url,
-              year,
-              country,
-              avg_score,
-              service_provider,
-            }) => {
-              return (
-                <MoviePosterItem
-                  key={id}
-                  korean_title={korean_title}
-                  poster_url={poster_url}
-                  year={year}
-                  country={country[0]}
-                  avg_score={avg_score}
-                  service_provider={service_provider}
-                />
-              );
-            }
-          )}
+          {this.state.data.map((el) => {
+            return (
+              <MoviePosterItem
+                key={el.id}
+                korean_title={el.korean_title}
+                poster_url={el.poster_url}
+                year={el.year}
+                country={el.country[0]}
+                avg_score={el.avg_score}
+                service_provider={el.service_provider}
+              />
+            );
+          })}
         </ul>
       </div>
     );

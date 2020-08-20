@@ -3,12 +3,20 @@ import "./MoviePosterItem.scss";
 
 export default class MoviePosterItem extends Component {
   render() {
+    const {
+      korean_title,
+      poster_url,
+      year,
+      country,
+      avg_score,
+      service_provider,
+    } = this.props;
     return (
       <li className="MoviePosterItem">
-        <a title={this.props.korean_title} href="#">
+        <a title={korean_title} href="#">
           <div className="moviePosterImgContainer">
             <div className="posterImgItem">
-              <img src={this.props.poster_url} />
+              <img src={poster_url} />
               <div className="rankBadge">1</div>
               <div className="ottBadge">
                 <img
@@ -19,14 +27,14 @@ export default class MoviePosterItem extends Component {
             </div>
           </div>
           <div className="moviePosterInfo">
-            <div className="movieContentTitle">{this.props.korean_title}</div>
+            <div className="movieContentTitle">{korean_title}</div>
             <div className="contentYearAndNation">
-              {this.props.year} ・ {this.props.country}
+              {year} ・ {country}
             </div>
             <div className="average">
               <span>평균</span>
               <span>★</span>
-              <span>{this.props.avg_score}</span>
+              <span>{avg_score}</span>
             </div>
           </div>
         </a>
