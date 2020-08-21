@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
-import HeaderPosterContainer from "./Components/HeaderPosterContainer/HeaderPosterContainer";
-import HeaderPanelContainer from "./Components/HeaderPanelContainer/HeaderPanelContainer";
+import DetailHeader from "./Components/DetailHeader/DetailHeader";
 import ContentsContainer from "./Components/ContentsContainer/ContentsContainer";
 import Collection from "./Components/Collection/Collection";
-import Poster from "./Components/Poster/Poster";
 
 import "./Detail.scss";
 
@@ -14,11 +12,8 @@ export default class Detail extends Component {
     return (
       <div className="Detail">
         <Nav />
+        <DetailHeader />
         <section className="DetailContainer">
-          <header className="DetailHeader">
-            <HeaderPosterContainer />
-            <HeaderPanelContainer />
-          </header>
           <div className="DetailWrapper">
             <div className="DetailItem">
               <div className="selfCommentBlock">

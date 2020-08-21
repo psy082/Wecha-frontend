@@ -4,7 +4,7 @@ import "./HeaderPanelContainer";
 class HeaderPanelContainer extends Component {
   render() {
     return (
-      <div className="HeaderPanelContainer">
+      <div className="HeaderPanelContainer responsiveBlock">
         <div className="headerPanel">
           <div className="title"></div>
           <div className="detail"></div>

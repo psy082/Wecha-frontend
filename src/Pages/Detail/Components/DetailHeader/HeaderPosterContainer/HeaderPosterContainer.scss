@@ -1,0 +1,29 @@
+@import "../../../../../Styles/common.scss";
+
+.HeaderPosterContainer {
+  .blurPosterContainer {
+    .leftBackground {
+    }
+
+    .blurPoster {
+      .leftGradient {
+      }
+      .rightGradient {
+      }
+    }
+
+    .rightBackground {
+    }
+
+    .dimmedLayer {
+    }
+  }
+  .infoPosterContainer {
+    position: relative;
+    margin: 0 auto;
+    .posterWrapper {
+      img {
+      }
+    }
+  }
+}
