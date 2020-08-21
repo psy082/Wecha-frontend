@@ -3,7 +3,14 @@ import "./Poster";
 
 class Poster extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div
+        style={{ height: this.props.height, width: this.props.width }}
+        className="Poster"
+      >
+        <img alt="poster" src={this.props.src} />
+      </div>
+    );
   }
 }
 
