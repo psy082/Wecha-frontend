@@ -8,7 +8,7 @@ export default class MoviePosters extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      films: [],
       slidesUnit: 5,
       currIndex: 0,
       endIndex: 0,
@@ -16,8 +16,8 @@ export default class MoviePosters extends Component {
   }
 
   makeEndIndex = () => {
-    let endIndex = parseInt(this.state.dataLength / this.state.slidesUnit);
-    if (this.state.dataLength % this.state.slidesUnit === 0) endIndex--;
+    let endIndex = parseInt(this.state.filmsLength / this.state.slidesUnit);
+    if (this.state.filmsLength % this.state.slidesUnit === 0) endIndex--;
     this.setState({ endIndex });
   };
 
@@ -35,15 +35,15 @@ export default class MoviePosters extends Component {
       .then((res) => {
         this.setState(
           {
-            data: res.data,
-            dataLength: res.data.length,
+            films: res.films,
+            filmsLength: res.films.length,
           },
           this.makeEndIndex
         );
       });
   };
-
   render() {
+    console.log(this.state.films);
     const settings = {
       dots: false,
       infinite: false,
@@ -61,7 +61,7 @@ export default class MoviePosters extends Component {
           state={this.state.currIndex === this.state.endIndex}
         />
       ),
-      speed: 700,
+      speed: 800,
       slidesToShow: this.state.slidesUnit,
       slidesToScroll: this.state.slidesUnit,
       initialSlide: 0,
@@ -87,17 +87,17 @@ export default class MoviePosters extends Component {
       <div className="MoviePosters">
         <ul className="moviePoster">
           <Slider {...settings}>
-            {this.state.data.map((el, idx) => {
+            {this.state.films.map((el, idx) => {
               return (
                 <MoviePosterItem
                   key={el.id}
                   rank_num={idx + 1}
-                  korean_title={el.korean_title}
+                  title={el.title}
                   poster_url={el.poster_url}
                   year={el.year}
-                  country={el.country[0]}
-                  avg_score={el.avg_score}
-                  service_provider={el.service_provider}
+                  countries={el.countries[0]}
+                  avg_rating={el.avg_rating}
+                  service_providers={el.service_providers}
                 />
               );
             })}
