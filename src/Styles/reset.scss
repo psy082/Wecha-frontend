@@ -78,13 +78,18 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -108,7 +113,8 @@ body {
 }
 
 ol,
-ul {
+ul,
+li {
   list-style: none;
 }
 

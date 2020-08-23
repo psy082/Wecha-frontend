@@ -1,0 +1,236 @@
+@import "../../Styles/common.scss";
+
+.Login {
+    height: 90vh;
+    @include center;
+    position: fixed;
+
+    .loginContainer {
+        width: 375px;
+        height: 539px;
+        padding-bottom: 40px;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+        background: rgb(255, 255, 255);
+    }
+
+    .logo {
+        @include center;
+        width: 100%;
+        height: 25%;
+        background-image: url("/images/modal/watcha_logo.svg");
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .title {
+        @include center;
+        font-size: 17px;
+        letter-spacing: -0.5px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+    .loginContents {
+        @include center;
+        flex-direction: column;
+
+        form {
+            @include center;
+            flex-direction: column;
+            // margin-top: 0em;
+
+            .label {
+                position: relative;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                width: 335px;
+                height: 44px;
+                margin-top: 8px;
+                padding: 0px 12px;
+                border-radius: 6px;
+                background: rgb(245, 245, 245);
+
+                .inputId,
+                .inputPw {
+                    padding: 0;
+                    width: 80%;
+                    letter-spacing: -0.7px;
+                    font-size: 16px;
+                    line-height: 21px;
+                    caret-color: rgb(255, 47, 110);
+                    background: transparent;
+                    border: none;
+
+                    &::placeholder {
+                        color: rgb(160, 160, 160);
+                        letter-spacing: -0.7px;
+                    }
+
+                    &:focus {
+                        outline: none;
+
+                        &~.checkIcon {
+                            width: 32px;
+                            height: 32px;
+                            position: absolute;
+                            top: 7px;
+                            right: 12px;
+                            background-image: url("/images/modal/check_icon.svg");
+                            background-size: 23px;
+                            background-repeat: no-repeat;
+                            background-position: 100% 50%;
+                            filter: grayscale(100%);
+                        }
+                    }
+                }
+
+                .inputPw {
+                    letter-spacing: 10px;
+                }
+            }
+
+            .wrongLabel {
+                position: relative;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                width: 335px;
+                height: 44px;
+                margin-top: 8px;
+                padding: 0px 12px;
+                border: 1px solid red;
+                border-radius: 6px;
+                background: rgb(255, 240, 240);
+
+                .inputWrongId,
+                .inputWrongPw {
+                    padding: 0;
+                    width: 80%;
+                    font-weight: 400;
+                    letter-spacing: -0.7px;
+                    font-size: 16px;
+                    line-height: 21px;
+                    caret-color: rgb(255, 47, 110);
+                    background: transparent;
+                    border: none;
+
+                    &::placeholder {
+                        color: rgb(160, 160, 160);
+                    }
+
+                    &:focus {
+                        outline: none;
+
+                        &~.checkIcon {
+                            width: 32px;
+                            height: 32px;
+                            position: absolute;
+                            top: 7px;
+                            right: 12px;
+                            background-image: url("/images/modal/warning_icon.svg");
+                            background-size: 23px;
+                            background-repeat: no-repeat;
+                            background-position: 100% 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .loginBtn {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 100%;
+        height: 44px;
+        padding: 0px;
+        font-size: 16px;
+        color: white;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        background: rgb(255, 47, 110);
+        border-radius: 6px;
+        margin: 16px 0px 25px;
+    }
+
+    .forgetPw {
+        cursor: pointer;
+        color: rgb(255, 47, 110);
+        background: none;
+        padding: 0px;
+        font-size: 15px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        margin-bottom: 20px;
+    }
+
+    .createId {
+        margin-bottom: 10px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        color: rgb(140, 140, 140);
+        font-size: 15px;
+        text-align: center;
+
+        a {
+            cursor: pointer;
+            color: rgb(255, 47, 110);
+            background: none;
+            padding: 0px;
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            margin: 0px;
+
+            &:visited {
+                color: rgb(255, 47, 110);
+            }
+        }
+    }
+
+    .hrText {
+        display: inline-block;
+        position: relative;
+        top: 17px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(160, 160, 160);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        line-height: 19px;
+        vertical-align: middle;
+        padding: 0px 14px;
+    }
+
+    hr {
+        width: 330px;
+        border-top: 0px solid rgb(216, 216, 216);
+        margin: 6px 0 38px
+    }
+
+    .fbLoginBtn {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 335px;
+        height: 44px;
+        font-size: 16px;
+        border-radius: 6px;
+        background: rgb(60, 90, 160);
+        background-image: url("/images/modal/facebook_icon.svg");
+        background-size: 23px;
+        background-repeat: no-repeat;
+        background-position: 5% 65%;
+    }
+}

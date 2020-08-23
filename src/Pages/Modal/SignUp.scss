@@ -1,0 +1,580 @@
+@import "../../Styles/common.scss";
+
+.SignUp {
+  @include center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  .signUpBg {
+    @include center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300vh;
+    height: 300vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: -1;
+  }
+
+  .signUpContainer {
+    width: 375px;
+    height: 559px;
+    padding-bottom: 60px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+    background: white;
+  }
+
+  .logo {
+    @include center;
+    width: 100%;
+    height: 25%;
+    background-image: url("/images/modal/watcha_logo.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+  }
+
+  .title {
+    @include center;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 16px;
+  }
+
+  .signUpContents {
+    @include center;
+    flex-direction: column;
+
+    form {
+      @include center;
+      flex-direction: column;
+
+      input {
+        padding: 0;
+        width: 80%;
+        letter-spacing: -0.7px;
+        font-size: 16px;
+        line-height: 21px;
+        caret-color: rgb(255, 47, 110);
+        background: transparent;
+        border: none;
+
+        &::placeholder {
+          color: rgb(160, 160, 160);
+          letter-spacing: -0.7px;
+        }
+
+        &:focus {
+          outline: none;
+
+          &~.checkIcon {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            background-image: url("/images/modal/check_icon.svg");
+            background-size: 23px;
+            background-repeat: no-repeat;
+            background-position: 100% 50%;
+            filter: grayscale(100%);
+          }
+        }
+      }
+
+      .label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 335px;
+        height: 44px;
+        margin-top: 8px;
+        padding: 0px 12px;
+        border-radius: 6px;
+        background: rgb(245, 245, 245);
+
+        .inputChecked {
+          padding: 0;
+          width: 80%;
+          letter-spacing: -0.7px;
+          font-size: 16px;
+          line-height: 21px;
+          caret-color: rgb(255, 47, 110);
+          background: transparent;
+          border: none;
+
+          &::placeholder {
+            color: rgb(160, 160, 160);
+            letter-spacing: -0.7px;
+          }
+
+          &:focus {
+            outline: none;
+
+            &~.checkIcon {
+              width: 32px;
+              height: 32px;
+              position: absolute;
+              top: 7px;
+              right: 12px;
+              background-image: url("/images/modal/check_icon.svg");
+              background-size: 23px;
+              background-repeat: no-repeat;
+              background-position: 100% 50%;
+              filter: grayscale(0);
+            }
+          }
+        }
+
+        input[name="pw"] {
+          letter-spacing: 10px;
+        }
+
+        // input[name="pw"].inputChecked {
+        //     letter-spacing: 10px;
+        // }
+      }
+
+      .labelWrong {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 335px;
+        height: 44px;
+        margin-top: 8px;
+        padding: 0px 12px;
+        border: 1px solid red;
+        border-radius: 6px;
+        background: rgb(255, 240, 240);
+
+        .inputChecked {
+          padding: 0;
+          width: 80%;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          font-size: 16px;
+          line-height: 21px;
+          caret-color: rgb(255, 47, 110);
+          background: transparent;
+          border: none;
+
+          &::placeholder {
+            color: rgb(160, 160, 160);
+          }
+
+          &:focus {
+            outline: none;
+
+            &~.checkIcon {
+              width: 32px;
+              height: 32px;
+              position: absolute;
+              top: 7px;
+              right: 12px;
+              background-image: url("/images/modal/warning_icon.svg");
+              background-size: 23px;
+              background-repeat: no-repeat;
+              background-position: 100% 50%;
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .signUpBtn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    height: 44px;
+    padding: 0px;
+    font-size: 16px;
+    color: white;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: rgb(255, 47, 110);
+    border-radius: 6px;
+    margin: 16px 0px 25px;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  .forgetPw {
+    cursor: pointer;
+    color: rgb(255, 47, 110);
+    background: none;
+    padding: 0px;
+    font-size: 15px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    margin-bottom: 20px;
+  }
+
+  .createId {
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    color: rgb(140, 140, 140);
+    font-size: 15px;
+    text-align: center;
+
+    a {
+      cursor: pointer;
+      color: rgb(255, 47, 110);
+      background: none;
+      padding: 0px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      margin: 0px;
+
+      &:visited {
+        color: rgb(255, 47, 110);
+      }
+    }
+  }
+
+  .hrText {
+    display: inline-block;
+    position: relative;
+    top: 17px;
+    background-color: white;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    vertical-align: middle;
+    padding: 0px 14px;
+  }
+
+  hr {
+    width: 330px;
+    border-top: 0px solid rgb(216, 216, 216);
+    margin: 6px 0 38px;
+  }
+
+  .fbLoginBtn {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    width: 335px;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: rgb(60, 90, 160);
+    background-image: url("/images/modal/facebook_icon.svg");
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: 5% 65%;
+  }
+}
+
+.hideSignUp {
+  @include center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+
+  .signUpBg {
+    @include center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300vh;
+    height: 300vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: -1;
+  }
+
+  .signUpContainer {
+    width: 375px;
+    height: 559px;
+    padding-bottom: 60px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+    background: white;
+  }
+
+  .logo {
+    @include center;
+    width: 100%;
+    height: 25%;
+    background-image: url("/images/modal/watcha_logo.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+  }
+
+  .title {
+    @include center;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 16px;
+  }
+
+  .signUpContents {
+    @include center;
+    flex-direction: column;
+
+    form {
+      @include center;
+      flex-direction: column;
+
+      input {
+        padding: 0;
+        width: 80%;
+        letter-spacing: -0.7px;
+        font-size: 16px;
+        line-height: 21px;
+        caret-color: rgb(255, 47, 110);
+        background: transparent;
+        border: none;
+
+        &::placeholder {
+          color: rgb(160, 160, 160);
+          letter-spacing: -0.7px;
+        }
+
+        &:focus {
+          outline: none;
+
+          &~.checkIcon {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            background-image: url("/images/modal/check_icon.svg");
+            background-size: 23px;
+            background-repeat: no-repeat;
+            background-position: 100% 50%;
+            filter: grayscale(100%);
+          }
+        }
+      }
+
+      .label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 335px;
+        height: 44px;
+        margin-top: 8px;
+        padding: 0px 12px;
+        border-radius: 6px;
+        background: rgb(245, 245, 245);
+
+        .inputChecked {
+          padding: 0;
+          width: 80%;
+          letter-spacing: -0.7px;
+          font-size: 16px;
+          line-height: 21px;
+          caret-color: rgb(255, 47, 110);
+          background: transparent;
+          border: none;
+
+          &::placeholder {
+            color: rgb(160, 160, 160);
+            letter-spacing: -0.7px;
+          }
+
+          &:focus {
+            outline: none;
+
+            &~.checkIcon {
+              width: 32px;
+              height: 32px;
+              position: absolute;
+              top: 7px;
+              right: 12px;
+              background-image: url("/images/modal/check_icon.svg");
+              background-size: 23px;
+              background-repeat: no-repeat;
+              background-position: 100% 50%;
+              filter: grayscale(0);
+            }
+          }
+        }
+
+        input[name="pw"] {
+          letter-spacing: 10px;
+        }
+
+        // input[name="pw"].inputChecked {
+        //     letter-spacing: 10px;
+        // }
+      }
+
+      .labelWrong {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 335px;
+        height: 44px;
+        margin-top: 8px;
+        padding: 0px 12px;
+        border: 1px solid red;
+        border-radius: 6px;
+        background: rgb(255, 240, 240);
+
+        .inputChecked {
+          padding: 0;
+          width: 80%;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          font-size: 16px;
+          line-height: 21px;
+          caret-color: rgb(255, 47, 110);
+          background: transparent;
+          border: none;
+
+          &::placeholder {
+            color: rgb(160, 160, 160);
+          }
+
+          &:focus {
+            outline: none;
+
+            &~.checkIcon {
+              width: 32px;
+              height: 32px;
+              position: absolute;
+              top: 7px;
+              right: 12px;
+              background-image: url("/images/modal/warning_icon.svg");
+              background-size: 23px;
+              background-repeat: no-repeat;
+              background-position: 100% 50%;
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .signUpBtn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    height: 44px;
+    padding: 0px;
+    font-size: 16px;
+    color: white;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: rgb(255, 47, 110);
+    border-radius: 6px;
+    margin: 16px 0px 25px;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  .forgetPw {
+    cursor: pointer;
+    color: rgb(255, 47, 110);
+    background: none;
+    padding: 0px;
+    font-size: 15px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    margin-bottom: 20px;
+  }
+
+  .createId {
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    color: rgb(140, 140, 140);
+    font-size: 15px;
+    text-align: center;
+
+    a {
+      cursor: pointer;
+      color: rgb(255, 47, 110);
+      background: none;
+      padding: 0px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      margin: 0px;
+
+      &:visited {
+        color: rgb(255, 47, 110);
+      }
+    }
+  }
+
+  .hrText {
+    display: inline-block;
+    position: relative;
+    top: 17px;
+    background-color: white;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    vertical-align: middle;
+    padding: 0px 14px;
+  }
+
+  hr {
+    width: 330px;
+    border-top: 0px solid rgb(216, 216, 216);
+    margin: 6px 0 38px;
+  }
+
+  .fbLoginBtn {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    width: 335px;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: rgb(60, 90, 160);
+    background-image: url("/images/modal/facebook_icon.svg");
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: 5% 65%;
+  }
+}
