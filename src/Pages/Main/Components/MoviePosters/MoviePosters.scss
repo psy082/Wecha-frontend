@@ -1,0 +1,10 @@
+@import "../../../../Styles/common.scss";
+
+.MoviePosters {
+  max-width: 1320px;
+  margin: 0 auto;
+
+  .moviePoster {
+    white-space: nowrap;
+  }
+}
