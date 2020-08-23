@@ -3,6 +3,7 @@
 .Login {
     height: 90vh;
     @include center;
+    position: fixed;
 
     .loginContainer {
         width: 375px;

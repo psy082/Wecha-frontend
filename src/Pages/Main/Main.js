@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
-import Login from "../../Pages/Modal/Login"
-import SignUp from "../../Pages/Modal/SignUp"
-// import Footer from "../../Components/Footer/Footer";
 import "./Main.scss";
 
 export default class Main extends Component {
@@ -11,8 +8,6 @@ export default class Main extends Component {
       <div className="Main">
         <Nav />
         <div className="contents"></div>
-        {/* <Login /> */}
-        <SignUp />
       </div>
     );
   }
