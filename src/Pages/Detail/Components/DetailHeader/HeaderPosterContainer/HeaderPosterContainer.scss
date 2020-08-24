@@ -1,29 +1,215 @@
 @import "../../../../../Styles/common.scss";
 
+$min1400: "(min-width: 1400px)";
+$min1300: "(min-width: 1300px)";
+$min1023: "(min-width: 1023px)";
+$min719: "(min-width: 719px)";
+
 .HeaderPosterContainer {
+  position: relative;
+  padding: 44px 0 20px;
+
   .blurPosterContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    overflow: hidden;
+    background: black;
+
     .leftBackground {
+      flex: 1 1 0;
     }
 
     .blurPoster {
-      .leftGradient {
-      }
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 110%;
+      filter: blur(15px);
+
+      .leftGradient,
       .rightGradient {
+        display: none;
+      }
+    }
+
+    @media #{$min719} {
+      .blurPoster {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 825px;
+        height: 100%;
+        filter: none;
+
+        .leftGradient {
+          display: block;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          width: 100px;
+        }
+
+        .rightGradient {
+          display: block;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          right: 0px;
+          width: 100px;
+        }
+      }
+    }
+
+    @media #{$min1023} {
+      .blurPoster {
+        width: 768px;
+
+        .leftGradient {
+          width: 100px;
+        }
+        .rightGradient {
+          width: 100px;
+        }
+      }
+    }
+
+    @media #{$min1300} {
+      .blurPoster {
+        width: 910px;
+
+        .leftGradient {
+          width: 150px;
+        }
+      }
+    }
+
+    @media #{$min1400} {
+      .blurPoster {
+        width: 1024px;
       }
     }
 
     .rightBackground {
+      flex: 1 1 0;
     }
 
     .dimmedLayer {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-image: linear-gradient(
+        -180deg,
+        rgba(20, 20, 20, 0.3) 1%,
+        rgba(20, 20, 20, 0.5) 67%,
+        rgb(20, 20, 20) 98%
+      );
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
-  }
-  .infoPosterContainer {
-    position: relative;
-    margin: 0 auto;
-    .posterWrapper {
-      img {
+
+    @media #{$min719} {
+      .dimmedLayer {
+        background-image: linear-gradient(
+          -180deg,
+          rgba(0, 0, 0, 0.35) 2%,
+          rgba(0, 0, 0, 0.2) 70%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
       }
     }
+  }
+
+  .infoPosterContainer {
+    margin: 0 auto;
+
+    .posterWrapper {
+      position: relative;
+
+      .poster {
+        position: relative;
+        width: 128px;
+        height: 184px;
+        overflow: hidden;
+        border: 1px solid $white;
+        border-image: initial;
+        border-radius: 3px;
+        margin: 0 auto;
+        background: $background-grey;
+        transition: all 300ms ease 0s;
+
+        img {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          object-fit: cover;
+          background: $background-grey;
+          transition: all 300ms ease 0s;
+        }
+      }
+    }
+  }
+
+  @media #{$min719} {
+    .infoPosterContainer {
+      max-width: 640px;
+      .posterWrapper {
+        .poster {
+          position: absolute;
+          top: -24px;
+          left: 0px;
+          width: 153px;
+          height: 221px;
+          border-width: 2px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px;
+        }
+      }
+    }
+  }
+
+  @media #{$min1023} {
+    .infoPosterContainer {
+      max-width: 960px;
+
+      .posterWrapper {
+        padding: 0 8px;
+        margin: 0 -8px;
+
+        .poster {
+          width: 166px;
+          height: 238px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$min719} {
+  .HeaderPosterContainer {
+    padding: 300px 0 0;
+  }
+}
+
+@media #{$min1023} {
+  .HeaderPosterContainer {
+    padding: 270px 0 0;
+  }
+}
+
+@media #{$min1300} {
+  .HeaderPosterContainer {
+    padding: 320px 0 0;
+  }
+}
+@media #{$min1400} {
+  .HeaderPosterContainer {
+    padding: 360px 0 0;
   }
 }
