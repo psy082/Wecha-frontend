@@ -34,6 +34,18 @@
   }
 }
 
+@mixin min1300px {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin min1400px {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin min1440px {
   @media (min-width: 1440px) {
     @content;
