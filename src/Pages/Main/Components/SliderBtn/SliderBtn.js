@@ -9,13 +9,14 @@ export default class SliderBtn extends Component {
   };
 
   render() {
+    const { onClick, move, type, state } = this.props;
     return (
       <button
         onClick={() => {
-          this.props.onClick();
-          this.props.move();
+          onClick();
+          move();
         }}
-        className={this.selectClass(this.props.type, this.props.state)}
+        className={this.selectClass(type, state)}
       >
         <img
           className="arrow"

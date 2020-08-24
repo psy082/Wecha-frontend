@@ -12,8 +12,9 @@ export default class MainContainer extends Component {
       person: [],
       country: [],
       genre: [],
-      collections: [],
       filmsLength: [],
+      collections: [],
+      collectionsLength: [],
       movieTitle: [
         "왓챠 영화 순위",
         "넷플릭스 영화 순위",
@@ -75,6 +76,7 @@ export default class MainContainer extends Component {
       .then((res) => {
         this.setState({
           collections: res.collections,
+          collectionsLength: res.collections.length,
         });
       });
   };
@@ -87,6 +89,7 @@ export default class MainContainer extends Component {
       country,
       genre,
       collections,
+      collectionsLength,
       filmsLength,
       movieTitle,
       slidesUnit,
@@ -130,7 +133,7 @@ export default class MainContainer extends Component {
         />
         <CollectionSlider
           collections={collections}
-          filmsLength={filmsLength}
+          collectionsLength={collectionsLength}
           slidesUnit={slidesUnit[0]}
         />
       </section>

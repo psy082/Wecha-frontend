@@ -21,8 +21,10 @@ export default class CollectionPosters extends Component {
   };
 
   render() {
-    let endIndex = parseInt(this.props.filmsLength / this.props.slidesUnit);
-    if (this.props.filmsLength % this.props.slidesUnit === 0) endIndex--;
+    let endIndex = parseInt(
+      this.props.collectionsLength / this.props.slidesUnit
+    );
+    if (this.props.collectionsLength % this.props.slidesUnit === 0) endIndex--;
 
     const settings = {
       dots: false,
