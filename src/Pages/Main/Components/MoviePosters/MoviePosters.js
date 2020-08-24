@@ -8,18 +8,9 @@ export default class MoviePosters extends Component {
   constructor() {
     super();
     this.state = {
-      films: [],
-      slidesUnit: 5,
       currIndex: 0,
-      endIndex: 0,
     };
   }
-
-  makeEndIndex = () => {
-    let endIndex = parseInt(this.state.filmsLength / this.state.slidesUnit);
-    if (this.state.filmsLength % this.state.slidesUnit === 0) endIndex--;
-    this.setState({ endIndex });
-  };
 
   goToPrev = () => {
     this.setState({ currIndex: this.state.currIndex - 1 });
@@ -29,21 +20,10 @@ export default class MoviePosters extends Component {
     this.setState({ currIndex: this.state.currIndex + 1 });
   };
 
-  componentDidMount = () => {
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState(
-          {
-            films: res.films,
-            filmsLength: res.films.length,
-          },
-          this.makeEndIndex
-        );
-      });
-  };
   render() {
-    console.log(this.state.films);
+    let endIndex = parseInt(this.props.filmsLength / this.props.slidesUnit);
+    if (this.props.filmsLength % this.props.slidesUnit === 0) endIndex--;
+
     const settings = {
       dots: false,
       infinite: false,
@@ -58,12 +38,12 @@ export default class MoviePosters extends Component {
         <SliderBtn
           type="nextArrow"
           move={this.goToNext}
-          state={this.state.currIndex === this.state.endIndex}
+          state={this.state.currIndex === endIndex}
         />
       ),
       speed: 800,
-      slidesToShow: this.state.slidesUnit,
-      slidesToScroll: this.state.slidesUnit,
+      slidesToShow: this.props.slidesUnit,
+      slidesToScroll: this.props.slidesUnit,
       initialSlide: 0,
       responsive: [
         {
@@ -87,7 +67,7 @@ export default class MoviePosters extends Component {
       <div className="MoviePosters">
         <ul className="moviePoster">
           <Slider {...settings}>
-            {this.state.films.map((el, idx) => {
+            {this.props.films.map((el, idx) => {
               return (
                 <MoviePosterItem
                   key={el.id}
@@ -98,6 +78,7 @@ export default class MoviePosters extends Component {
                   countries={el.countries[0]}
                   avg_rating={el.avg_rating}
                   service_providers={el.service_providers}
+                  removeYearNation={this.props.removeYearNation}
                 />
               );
             })}

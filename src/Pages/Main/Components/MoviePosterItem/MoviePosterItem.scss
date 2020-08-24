@@ -96,7 +96,7 @@
     .moviePosterInfo {
       margin: 5px 10px 0 0;
       text-align: left;
-      height: 66px;
+      height: 100%;
 
       .movieContentTitle {
         color: #292a32;
@@ -116,6 +116,10 @@
         line-height: 21px;
         padding-bottom: 1px;
         letter-spacing: normal;
+      }
+
+      .removeYearNation {
+        display: none;
       }
 
       .average {

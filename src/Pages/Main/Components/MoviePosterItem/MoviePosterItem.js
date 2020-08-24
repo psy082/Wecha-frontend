@@ -25,6 +25,7 @@ export default class MoviePosterItem extends Component {
       year,
       countries,
       avg_rating,
+      removeYearNation,
     } = this.props;
     return (
       <li className="MoviePosterItem">
@@ -49,7 +50,7 @@ export default class MoviePosterItem extends Component {
           </div>
           <div className="moviePosterInfo">
             <div className="movieContentTitle">{title}</div>
-            <div className="contentYearAndNation">
+            <div className={`contentYearAndNation ${removeYearNation}`}>
               {year} ・ {countries}
             </div>
             <div className="average">
