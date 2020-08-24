@@ -10,6 +10,48 @@
   color: rgb(41, 42, 50);
 }
 
+@mixin min719px {
+  @media (min-width: 719px) {
+    @content;
+  }
+}
+
+@mixin min760px {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin min1023px {
+  @media (min-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin min1100px {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin min1300px {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin min1400px {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin min1440px {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
 $white: rgb(255, 255, 255);
 
 $background-grey: rgb(248, 248, 248);
