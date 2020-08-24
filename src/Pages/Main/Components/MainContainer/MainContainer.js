@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MovieListSlider from "../MovieListSlider/MovieListSlider";
+import CollectionSlider from "../Collection/CollectionSlider/CollectionSlider";
 import "./MainContainer.scss";
 
 export default class MainContainer extends Component {
@@ -11,6 +12,7 @@ export default class MainContainer extends Component {
       person: [],
       country: [],
       genre: [],
+      collections: [],
       filmsLength: [],
       movieTitle: [
         "왓챠 영화 순위",
@@ -65,6 +67,16 @@ export default class MainContainer extends Component {
           country: res.films,
         });
       });
+
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainPageCollections.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          collections: res.collections,
+        });
+      });
   };
 
   render() {
@@ -74,11 +86,13 @@ export default class MainContainer extends Component {
       person,
       country,
       genre,
+      collections,
       filmsLength,
       movieTitle,
       slidesUnit,
       removeYearNation,
     } = this.state;
+    console.log(collections);
     return (
       <section className="MainContainer">
         <MovieListSlider
@@ -113,6 +127,11 @@ export default class MainContainer extends Component {
           movieTitle={movieTitle[4]}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
+        />
+        <CollectionSlider
+          collections={collections}
+          filmsLength={filmsLength}
+          slidesUnit={slidesUnit[0]}
         />
       </section>
     );
