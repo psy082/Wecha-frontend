@@ -5,27 +5,9 @@ $min719: "(min-width: 719px)";
 
 .DetailHeader {
   background: $white;
-
-  .responsiveBlock {
-    margin: 0 auto;
-  }
-
-  @media #{$min719} {
-    .responsiveBlock {
-      max-width: 640px;
-    }
-  }
-
-  @media #{$min1023} {
-    .responsiveBlock {
-      max-width: 960px;
-      margin: 0 -8px;
-      padding: 0 8px;
-    }
-  }
 }
 
-@media #{$min719} {
+@include min719px {
   .DetailHeader {
     border-bottom: 1px solid $border-grey;
   }
