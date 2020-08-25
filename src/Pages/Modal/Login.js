@@ -11,7 +11,7 @@ class Login extends Component {
   }
 
   showLoginModal = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     this.props.functionLoginModal();
   };
 
@@ -57,7 +57,7 @@ class Login extends Component {
               <button
                 className="loginBtn"
                 onClick={this.props.loginFetch}
-                // disabled={!btnValidation}
+                disabled={!btnValidation}
               >
                 로그인
               </button>
@@ -77,6 +77,3 @@ class Login extends Component {
 }
 
 export default withRouter(Login);
-
-
-

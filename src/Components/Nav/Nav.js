@@ -91,7 +91,6 @@ class Nav extends Component {
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log(res.profile_url);
           if (token) {
             this.setState({
               isLogin: true,
