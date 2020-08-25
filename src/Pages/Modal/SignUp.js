@@ -1,20 +1,21 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./SignUp.scss";
 
-export default class SignUp extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: "",
       email: "",
       password: "",
-      visible: this.props.visible,
+      signUpVisible: this.props.signUpVisible,
     };
   }
 
-  showModal = (e) => {
+  showSignUpModal = (e) => {
     e.preventDefault();
-    this.props.functionCallFromParent();
+    this.props.functionSignUpModal();
   };
 
   handleInput = (e) => {
@@ -35,7 +36,7 @@ export default class SignUp extends Component {
     return this.validate(type) ? "label" : "labelWrong";
   };
 
-  handleSignUp = () => {
+  handleFetch = () => {
     fetch("http://10.58.5.55:8000/user/signup", {
       method: "POST",
       body: JSON.stringify({
@@ -43,10 +44,17 @@ export default class SignUp extends Component {
         email: this.state.email,
         password: this.state.password,
       }),
-    }).then((res) => {
-      console.log(res.message);
-      res.json();
-    });
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.message === "SIGNUP_SUCCESS") {
+          alert("회원가입 성공");
+          this.props.history.push("/");
+          window.location.reload();
+        } else {
+          alert("회원가입 실패");
+        }
+      });
   };
 
   render() {
@@ -57,16 +65,15 @@ export default class SignUp extends Component {
 
     return (
       <div className={this.props.switchModal ? "hideSignUp" : "SignUp"}>
-        <div className="signUpBg" onClick={this.showModal.bind(this)}></div>
+        <div
+          className="signUpBg"
+          onClick={this.showSignUpModal.bind(this)}
+        ></div>
         <div className="signUpContainer">
           <header className="logo"></header>
           <h2 className="title">회원가입</h2>
           <section className="signUpContents">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
+            <div className="form">
               <div className={this.decideState("name", this.state.name)}>
                 <input
                   className={this.state.name ? "inputChecked" : "none"}
@@ -101,12 +108,12 @@ export default class SignUp extends Component {
               </div>
               <button
                 className="signUpBtn"
-                onClick={this.handleSignUp}
+                onClick={this.handleFetch}
                 disabled={!btnValidation}
               >
                 회원가입
               </button>
-            </form>
+            </div>
             <p className="createId">
               이미 가입하셨나요? <a href="/">로그인</a>
             </p>
@@ -119,3 +126,5 @@ export default class SignUp extends Component {
     );
   }
 }
+
+export default withRouter(SignUp);

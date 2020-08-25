@@ -1,33 +1,67 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./Login.scss";
 
-export default class Login extends Component {
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loginVisible: this.props.loginVisible,
+    };
+  }
+
+  showLoginModal = (e) => {
+    // e.preventDefault();
+    this.props.functionLoginModal();
+  };
+
   render() {
+    const btnValidation =
+      this.props.email.includes("@") && this.props.password.length > 5;
+
     return (
-      <login className="Login">
+      <div className={this.props.switchModal ? "hideLogin" : "Login"}>
+        <div className="loginBg" onClick={this.showLoginModal.bind(this)}></div>
         <div className="loginContainer">
           <header className="logo"></header>
           <h2 className="title">로그인</h2>
           <section className="loginContents">
-            <form>
-              <div className="label">
+            <div className="form">
+              <div
+                className={this.props.decideState("email", this.props.email)}
+              >
                 <input
-                  className="inputId"
+                  className={this.props.email ? "inputChecked" : "none"}
                   type="text"
                   placeholder="이메일"
+                  name="email"
+                  onChange={this.props.handleInput}
                 ></input>
                 <div className="checkIcon"></div>
               </div>
-              <div className="label">
+              <div
+                className={this.props.decideState(
+                  "password",
+                  this.props.password
+                )}
+              >
                 <input
-                  className="inputPw"
+                  className={this.props.password ? "inputChecked" : "none"}
                   type="password"
                   placeholder="비밀번호"
+                  name="password"
+                  onChange={this.props.handleInput}
                 ></input>
                 <div className="checkIcon"></div>
               </div>
-              <button className="loginBtn">로그인</button>
-            </form>
+              <button
+                className="loginBtn"
+                onClick={this.props.loginFetch}
+                // disabled={!btnValidation}
+              >
+                로그인
+              </button>
+            </div>
             <p className="forgetPw">비밀번호를 잊어버리셨나요?</p>
             <p className="createId">
               계정이 없으신가요? <a href="/">회원가입</a>
@@ -37,7 +71,12 @@ export default class Login extends Component {
             <button className="fbLoginBtn">Facebook 으로 로그인</button>
           </section>
         </div>
-      </login>
+      </div>
     );
   }
 }
+
+export default withRouter(Login);
+
+
+
