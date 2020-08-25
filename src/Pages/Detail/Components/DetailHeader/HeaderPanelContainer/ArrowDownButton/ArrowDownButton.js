@@ -11,7 +11,11 @@ class ArrowDownButton extends Component {
         viewBox="0 0 24 24"
         className="ArrowDownButton"
       >
-        <path fill="#FFF" fillRule="evenodd" d="M12 16l6-6H6z"></path>
+        <path
+          fill={this.props.fill ? "#d9d9d9" : "#FFF"}
+          fillRule="evenodd"
+          d="M12 16l6-6H6z"
+        ></path>
       </svg>
     );
   }

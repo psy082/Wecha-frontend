@@ -37,84 +37,6 @@
         line-height: 20px;
         white-space: pre-wrap;
       }
-
-      .buttonBlockContainer {
-        margin: 19px 0 14px;
-
-        .buttonBlockWrapper {
-          display: flex;
-          width: 254px;
-          height: 40px;
-          border-radius: 6px;
-          margin: 0 auto;
-          overflow: hidden;
-          background: #ff2f6e;
-
-          .actionButton {
-            height: 100%;
-            padding: 0;
-            border: none;
-            margin: 0;
-            background: none;
-            cursor: pointer;
-            flex: 1;
-            color: #f6f6f6;
-            text-align: center;
-            font-size: 17px;
-            font-weight: 500;
-            letter-spacing: -0.7px;
-            line-height: 22px;
-            outline: none;
-
-            .buttonInner {
-              position: relative;
-              left: -8px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              .plusButton {
-                display: inline-block;
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogc2tldGNodG9vbCA1MC4yICg1NTA0NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+NjMwMjYxNEEtQzhBMy00MkMwLTlDQzctQTBEQzNDOEM1NTVDPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJY29ucy0mYW1wOy1Bc3NldHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJJY29uLS8tSWNBZGRXaGl0ZSIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtMyIgeD0iMTEiIHk9IjQuNSIgd2lkdGg9IjIiIGhlaWdodD0iMTUiIHJ4PSIxIj48L3JlY3Q+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtMy1Db3B5IiB4PSI0LjUiIHk9IjExIiB3aWR0aD0iMTUiIGhlaWdodD0iMiIgcng9IjEiPjwvcmVjdD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==)
-                  no-repeat center;
-                background-size: contain;
-                width: 24px;
-                height: 24px;
-                margin-right: 6px;
-                transition: 300ms;
-              }
-            }
-
-            &:hover {
-              .buttonInner {
-                .plusButton {
-                  transform: rotate(90deg);
-                }
-              }
-            }
-          }
-
-          .openButton {
-            display: inline-block;
-            width: 51px;
-            height: 100%;
-            padding: 8px 0;
-            border-left: 1px solid #e71252;
-            margin: 0;
-            background: none;
-            cursor: pointer;
-            vertical-align: top;
-            text-align: center;
-            outline: none;
-
-            &:hover {
-              .ArrowDownButton {
-                transform: translateY(3px);
-              }
-            }
-          }
-        }
-      }
     }
   }
 
@@ -127,15 +49,6 @@
 
         .title {
           width: 520px;
-        }
-
-        .buttonBlockContainer {
-          float: left;
-          margin: 39px 21px 0 0;
-
-          .buttonBlockWrapper {
-            width: 213px;
-          }
         }
       }
     }
@@ -171,15 +84,6 @@
           font-weight: 400;
           letter-spacing: -0.7px;
           line-height: 22px;
-        }
-
-        .buttonBlockContainer {
-          float: left;
-          margin: 39px 30px 0 0;
-
-          .buttonBlockWrapper {
-            width: 254px;
-          }
         }
       }
     }

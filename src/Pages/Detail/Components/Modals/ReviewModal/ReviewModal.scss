@@ -1,0 +1,138 @@
+@import "../../../../../Styles/common.scss";
+
+.ReviewModal {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+  background: $white;
+  overflow: hidden;
+
+  .reviewModalWrapper {
+    margin: 0 20px;
+
+    .contentInfo {
+      display: flex;
+      border-bottom: 1px solid $border-grey;
+
+      .contentImageWrapper {
+        position: relative;
+        width: 48px;
+        height: 68px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-image: initial;
+        border-radius: 3px;
+        margin: 20px 14px 20px 0px;
+        background: rgb(248, 248, 248);
+        overflow: hidden;
+
+        .contentBackground {
+          display: inline-block;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          background-size: cover;
+          opacity: 1;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: all 300ms ease 0s;
+        }
+      }
+
+      .contentTitleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        padding: 10px 0px;
+
+        .contentTitle {
+          color: rgb(0, 0, 0);
+          font-size: 19px;
+          font-weight: 700;
+          letter-spacing: -0.7px;
+          line-height: 28px;
+        }
+
+        .contentSubtitle {
+          color: rgb(120, 120, 120);
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: -0.5px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .actionButtonContainer {
+      border-bottom: 1px solid rgb(240, 240, 240);
+    }
+
+    .columnActionButton {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid rgb(240, 240, 240);
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      cursor: pointer;
+
+      .actionText {
+        text-align: left;
+        flex: 1 1 0%;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        margin: 12px 0px;
+      }
+    }
+
+    .cancelButton {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 0;
+      font-size: 15px;
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      cursor: pointer;
+      color: rgb(255, 47, 110);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    @include min719px {
+      .cancelButton {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+@include min719px {
+  .ReviewModal {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    width: 375px;
+    border-radius: 6px;
+    overflow: auto;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      margin-left: -0.25em;
+    }
+  }
+}
