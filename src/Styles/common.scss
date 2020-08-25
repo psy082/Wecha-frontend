@@ -10,12 +10,60 @@
   color: rgb(41, 42, 50);
 }
 
+@mixin min719px {
+  @media (min-width: 719px) {
+    @content;
+  }
+}
+
+@mixin min760px {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin min1023px {
+  @media (min-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin min1100px {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin min1300px {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin min1400px {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin min1440px {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
 $white: rgb(255, 255, 255);
+
 $background-grey: rgb(248, 248, 248);
+
 $border-grey: rgb(227, 227, 227);
+
 $predict-color: rgb(255, 5, 88);
+
 $scored-color: rgb(255, 161, 54);
+
 $average-color: rgb(85, 87, 101);
+
 $like-color: #ff2f6e;
 
 body {
