@@ -16,18 +16,14 @@ const titleByRating = {
 };
 
 class SelfRating extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      rating: 2.5,
-    };
-
-    this.state.widthByRating = `${this.state.rating * 20}%`;
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.state.widthByRating = `${props.rating * 20}%`;
   }
 
   initWidth = () => {
-    this.setState({ widthByRating: `${this.state.rating * 20}%` });
+    this.setState({ widthByRating: `${this.props.rating * 20}%` });
   };
 
   traceMouse = (() => {
@@ -47,14 +43,14 @@ class SelfRating extends Component {
 
   giveRating = ({ nativeEvent }, index) => {
     let rating = nativeEvent.offsetX > 20 ? index : index - 0.5;
-    if (this.state.rating === rating) this.setState({ rating: 0 });
-    else this.setState({ rating });
+    if (this.props.rating === rating) this.props.changeRating(0);
+    else this.props.changeRating(rating);
   };
 
   render() {
     return (
       <div className="SelfRating">
-        <div className="titleByRating">{titleByRating[this.state.rating]}</div>
+        <div className="titleByRating">{titleByRating[this.props.rating]}</div>
         <div className="starContainer" onMouseLeave={this.initWidth}>
           <div className="unratedStars">
             {[0, 0, 0, 0, 0].map((_, index) => (

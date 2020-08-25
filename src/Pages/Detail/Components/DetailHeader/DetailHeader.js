@@ -5,10 +5,11 @@ import "./DetailHeader.scss";
 
 class DetailHeader extends Component {
   render() {
+    const { rating, changeRating } = this.props;
     return (
       <header className="DetailHeader">
         <HeaderPosterContainer />
-        <HeaderPanelContainer />
+        <HeaderPanelContainer rating={rating} changeRating={changeRating} />
       </header>
     );
   }

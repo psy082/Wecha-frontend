@@ -5,6 +5,7 @@ import "./HeaderPanelContainer.scss";
 
 class HeaderPanelContainer extends Component {
   render() {
+    const { rating, changeRating } = this.props;
     return (
       <div className="HeaderPanelContainer">
         <div className="headerPanelWrapper">
@@ -25,7 +26,7 @@ class HeaderPanelContainer extends Component {
                 </button>
               </div>
             </div>
-            <SelfRating />
+            <SelfRating rating={rating} changeRating={changeRating} />
           </div>
         </div>
       </div>

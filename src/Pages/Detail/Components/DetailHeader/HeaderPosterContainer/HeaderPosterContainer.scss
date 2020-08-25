@@ -1,10 +1,5 @@
 @import "../../../../../Styles/common.scss";
 
-$min1400: "(min-width: 1400px)";
-$min1300: "(min-width: 1300px)";
-$min1023: "(min-width: 1023px)";
-$min719: "(min-width: 719px)";
-
 .HeaderPosterContainer {
   position: relative;
   padding: 44px 0 20px;
@@ -38,7 +33,7 @@ $min719: "(min-width: 719px)";
       }
     }
 
-    @media #{$min719} {
+    @include min719px {
       .blurPoster {
         position: relative;
         top: auto;
@@ -67,7 +62,7 @@ $min719: "(min-width: 719px)";
       }
     }
 
-    @media #{$min1023} {
+    @include min1023px {
       .blurPoster {
         width: 768px;
 
@@ -80,7 +75,7 @@ $min719: "(min-width: 719px)";
       }
     }
 
-    @media #{$min1300} {
+    @include min1300px {
       .blurPoster {
         width: 910px;
 
@@ -90,7 +85,7 @@ $min719: "(min-width: 719px)";
       }
     }
 
-    @media #{$min1400} {
+    @include min1400px {
       .blurPoster {
         width: 1024px;
       }
@@ -115,7 +110,7 @@ $min719: "(min-width: 719px)";
       overflow: hidden;
     }
 
-    @media #{$min719} {
+    @include min719px {
       .dimmedLayer {
         background-image: linear-gradient(
           -180deg,
@@ -157,9 +152,10 @@ $min719: "(min-width: 719px)";
     }
   }
 
-  @media #{$min719} {
+  @include min719px {
     .infoPosterContainer {
       max-width: 640px;
+
       .posterWrapper {
         .poster {
           position: absolute;
@@ -174,13 +170,13 @@ $min719: "(min-width: 719px)";
     }
   }
 
-  @media #{$min1023} {
+  @include min1023px {
     .infoPosterContainer {
       max-width: 960px;
 
       .posterWrapper {
         padding: 0 8px;
-        margin: 0 -8px;
+        margin: 0 1px;
 
         .poster {
           width: 166px;
@@ -191,24 +187,24 @@ $min719: "(min-width: 719px)";
   }
 }
 
-@media #{$min719} {
+@include min719px {
   .HeaderPosterContainer {
     padding: 300px 0 0;
   }
 }
 
-@media #{$min1023} {
+@include min1023px {
   .HeaderPosterContainer {
     padding: 270px 0 0;
   }
 }
 
-@media #{$min1300} {
+@include min1300px {
   .HeaderPosterContainer {
     padding: 320px 0 0;
   }
 }
-@media #{$min1400} {
+@include min1400px {
   .HeaderPosterContainer {
     padding: 360px 0 0;
   }
