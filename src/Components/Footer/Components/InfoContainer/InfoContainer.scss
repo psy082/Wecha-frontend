@@ -16,7 +16,8 @@
 
   .infoContainerPadding {
     display: flex;
-    margin: 0 60px;
+    max-width: 1320px;
+    margin: 0 auto;
 
     .infoContainerLeft {
       flex: 1;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import InfoContainerRight from "../InfoContainerRight/InfoContainerRight";
 import "./InfoContainer.scss";
 
 export default class InfoContainer extends Component {
@@ -50,7 +51,7 @@ export default class InfoContainer extends Component {
               <li className="CompanyInfoText">© 2011 Watcha. Inc</li>
             </ul>
           </div>
-          {/* <div className="InfoContainerRight"></div> */}
+          <InfoContainerRight />
         </div>
       </div>
     );
