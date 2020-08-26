@@ -20,12 +20,16 @@ export default class CollectionPosters extends Component {
     this.setState({ currIndex: this.state.currIndex + 1 });
   };
 
-  render() {
+  calcEndIdx = () => {
     let endIndex = parseInt(
       this.props.collectionsLength / this.props.slidesUnit
     );
     if (this.props.collectionsLength % this.props.slidesUnit === 0) endIndex--;
 
+    return endIndex;
+  };
+
+  render() {
     const settings = {
       dots: false,
       infinite: false,
@@ -40,7 +44,7 @@ export default class CollectionPosters extends Component {
         <SliderBtn
           type="nextArrow"
           move={this.goToNext}
-          state={this.state.currIndex === endIndex}
+          state={this.state.currIndex === this.calcEndIdx()}
         />
       ),
       speed: 800,

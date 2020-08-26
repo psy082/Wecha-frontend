@@ -25,7 +25,6 @@ export default class MainContainer extends Component {
         "인물",
         "국가",
         "장르",
-        "임의의 유저 컬렉션",
       ],
       slidesUnit: [5, 6],
       removeYearNation: "removeYearNation",
@@ -33,6 +32,10 @@ export default class MainContainer extends Component {
     };
   }
   componentDidMount = () => {
+    this.fetchFilms();
+  };
+
+  fetchFilms = () => {
     fetch(
       "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
     )

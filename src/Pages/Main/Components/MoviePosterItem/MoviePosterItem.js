@@ -5,15 +5,15 @@ export default class MoviePosterItem extends Component {
   selectClass = (ottName, onlyOttName) => {
     let className = "ottBadge";
     const { service_providers } = this.props;
-    let sp_names = [];
+    let sp_id = [];
 
     service_providers.forEach((sp) => {
-      sp_names.push(sp.name);
+      sp_id.push(sp.id);
     });
 
-    if (sp_names.includes("netflix") && sp_names.includes("watcha")) {
+    if (sp_id.includes(48) && sp_id.includes(46)) {
       className += ` ${ottName}`;
-    } else if (sp_names.includes(ottName)) {
+    } else if (sp_id.includes(48) || sp_id.includes(46)) {
       className += ` ${onlyOttName}`;
     }
     return className;

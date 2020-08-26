@@ -9,26 +9,15 @@ export default class CollectionItem extends Component {
         <a title={name} href="#">
           <div className="collectionImgContainer">
             <div className="posterImgItem">
-              <div className="posterImgBox">
-                <div className="posterImg">
-                  <img alt="CollectionImage" src={poster_urls[0]} />
-                </div>
-              </div>
-              <div className="posterImgBox">
-                <div className="posterImg">
-                  <img alt="CollectionImage" src={poster_urls[1]} />
-                </div>
-              </div>
-              <div className="posterImgBox">
-                <div className="posterImg">
-                  <img alt="CollectionImage" src={poster_urls[2]} />
-                </div>
-              </div>
-              <div className="posterImgBox">
-                <div className="posterImg">
-                  <img alt="CollectionImage" src={poster_urls[3]} />
-                </div>
-              </div>
+              {poster_urls.map((el, idx) => {
+                return (
+                  <div key={idx} className="posterImgBox">
+                    <div className="posterImg">
+                      <img alt="CollectionImage" src={el} />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="collectionInfo">

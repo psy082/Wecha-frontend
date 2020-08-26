@@ -7,8 +7,8 @@ export default class CollectionSlider extends Component {
     const { collections, collectionsLength, slidesUnit } = this.props;
     return (
       <div className="CollectionSlider">
-        <div className="CollectionTitle">
-          <p className="CollectionTitleText">랜덤 유저 컬렉션</p>
+        <div className="collectionTitle">
+          <p className="collectionTitleText">랜덤 유저 컬렉션</p>
         </div>
         <CollectionPosters
           collections={collections}
