@@ -1,0 +1,20 @@
+@import "../../../../../Styles/common.scss";
+
+.ThumbnailImage {
+  position: relative;
+  @include center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-image: initial;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .userImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

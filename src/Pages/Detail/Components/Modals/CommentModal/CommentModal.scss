@@ -1,0 +1,141 @@
+@import "../../../../../Styles/common.scss";
+
+.CommentModal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  z-index: 150;
+
+  .commentedMovie {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    padding: 0px 16px;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    background: $white;
+
+    .headerButtons {
+      position: relative;
+      z-index: 160;
+
+      .escapeButton {
+        width: 24px;
+        height: 24px;
+        padding: 0px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        margin: 10px 0px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9IiNGRjJGNkUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTIgMTIpIj4KICAgICAgICA8cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSIxOCIgeD0iMTEiIHk9IjMiIHJ4PSIxIi8+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjIiIHg9IjMiIHk9IjExIiByeD0iMSIvPgogICAgPC9nPgo8L3N2Zz4K);
+        outline: none;
+        cursor: pointer;
+      }
+
+      .createComment {
+        position: relative;
+        padding: 0px;
+        margin: 11px 0px;
+        color: rgb(255, 47, 110);
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        background: none;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        outline: none;
+        cursor: pointer;
+
+        &:disabled {
+          color: rgb(210, 210, 210);
+          cursor: default;
+        }
+      }
+    }
+
+    .movieTitle {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      margin: 11px 0px;
+      text-align: center;
+      z-index: 1;
+    }
+  }
+
+  .commentInputContainer {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 44px 0px 0px;
+
+    .commentInputWrapper {
+      position: relative;
+      height: 100%;
+      padding: 0px;
+      margin: 0 20px;
+      overflow: scroll;
+
+      textarea {
+        width: 100%;
+        margin: 1px 0px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 26px;
+        resize: none;
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+        outline: none;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+@include min719px {
+  .CommentModal {
+    display: inline-block;
+    position: relative;
+    width: 640px;
+    height: auto;
+    min-height: 540px;
+    border-radius: 6px;
+    vertical-align: middle;
+    text-align: left;
+    overflow: auto;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-left: -0.25rem;
+      vertical-align: middle;
+    }
+
+    .commentInputContainer {
+      height: auto;
+      overflow: auto;
+
+      .commentInputWrapper {
+        overflow: hidden;
+      }
+    }
+  }
+}

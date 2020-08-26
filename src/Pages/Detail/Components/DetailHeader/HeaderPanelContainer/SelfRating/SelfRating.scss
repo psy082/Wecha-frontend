@@ -1,0 +1,73 @@
+@import "../../../../../../Styles/common.scss";
+
+.SelfRating {
+  .titleByRating {
+    display: inline-block;
+    color: #787878;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .starContainer {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+
+    .unratedStars {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      height: 40px;
+
+      .startImage {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0VFRSIgZD0iTTIyIDMzLjQ0NEw5LjgzIDQyLjMyN2MtLjc4NC41NzItMS44NDItLjE5Ni0xLjUzOS0xLjExOGw0LjY4Ny0xNC4zMkwuNzY5IDE4LjA2Yy0uNzg3LS41NjktLjM4My0xLjgxMi41ODgtMS44MWwxNS4wNjcuMDMzIDQuNjI0LTE0LjM0Yy4yOTgtLjkyNCAxLjYwNi0uOTI0IDEuOTA0IDBsNC42MjQgMTQuMzQgMTUuMDY3LS4wMzNjLjk3MS0uMDAyIDEuMzc1IDEuMjQxLjU4OCAxLjgxbC0xMi4yMDkgOC44MjkgNC42ODggMTQuMzJjLjMwMi45MjItLjc1NiAxLjY5LTEuNTQgMS4xMThMMjIgMzMuNDQ0eiIvPgogICAgPC9nPgo8L3N2Zz4K)
+          no-repeat center;
+        background-size: contain;
+        vertical-align: top;
+      }
+    }
+
+    .ratedStars {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+
+      .startImage {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGREQ2MyIgZD0iTTIyIDMzLjQ0NEw5LjgzIDQyLjMyN2MtLjc4NC41NzItMS44NDItLjE5Ni0xLjUzOS0xLjExOGw0LjY4Ny0xNC4zMkwuNzY5IDE4LjA2Yy0uNzg3LS41NjktLjM4My0xLjgxMi41ODgtMS44MWwxNS4wNjcuMDMzIDQuNjI0LTE0LjM0Yy4yOTgtLjkyNCAxLjYwNi0uOTI0IDEuOTA0IDBsNC42MjQgMTQuMzQgMTUuMDY3LS4wMzNjLjk3MS0uMDAyIDEuMzc1IDEuMjQxLjU4OCAxLjgxbC0xMi4yMDkgOC44MjkgNC42ODggMTQuMzJjLjMwMi45MjItLjc1NiAxLjY5LTEuNTQgMS4xMThMMjIgMzMuNDQ0eiIvPgogICAgPC9nPgo8L3N2Zz4K)
+          no-repeat center;
+        background-size: contain;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@include min719px {
+  .SelfRating {
+    float: left;
+    margin: 15px 0 0;
+
+    .title {
+      text-align: left;
+    }
+
+    .starContainer {
+      margin: 3px 0 0;
+    }
+  }
+}
