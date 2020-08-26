@@ -1,0 +1,38 @@
+@import "../../../../Styles/common.scss";
+
+.DetailContainer {
+  overflow: hidden;
+  .DetailWrapper {
+    margin: 0 auto;
+  }
+}
+
+@include min719px {
+  .DetailContainer {
+    padding: 28px 0 48px;
+    display: flex;
+    justify-content: center;
+
+    .DetailWrapper {
+      max-width: 640px;
+      .DetailItem {
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include min1023px {
+  .DetailContainer {
+    .DetailWrapper {
+      max-width: 976px;
+      margin: 0 -8px;
+      .DetailItem {
+        float: left;
+        width: 640px;
+        padding: 0 8px;
+      }
+    }
+  }
+}

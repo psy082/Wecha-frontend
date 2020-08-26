@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import DetailHeader from "./Components/DetailHeader/DetailHeader";
-import ContentsContainer from "./Components/ContentsContainer/ContentsContainer";
-import Collection from "./Components/Collection/Collection";
+import DetailContainer from "./Components/DetailContainer/DetailContainer";
+import CommentModal from "./Components/Modals/CommentModal/CommentModal";
+import AlertModal from "./Components/Modals/AlertModal/AlertModal";
 import ReviewModal from "./Components/Modals/ReviewModal/ReviewModal";
 
 import "./Detail.scss";
@@ -17,6 +18,8 @@ export default class Detail extends Component {
     rating: 2.5,
     reviewStatus: "none",
     modal: "none",
+    comment: "",
+    username: "김동호",
   };
 
   changeRating = (rating) => {
@@ -31,12 +34,37 @@ export default class Detail extends Component {
     this.setState({ modal });
   };
 
+  closeModel = (e) => {
+    if (e.target.className !== "modalContainer") return;
+    this.setState({ modal: "none" });
+  };
+
+  createComment = (comment) => {
+    if (!comment) return;
+    this.setState({ comment: comment.trim() });
+  };
+
+  removeComment = () => {
+    this.setState({ comment: "" });
+  };
+
   render() {
     const {
       changeRating,
       changeReviewStatus,
       openModal,
-      state: { background, title, year, rating, reviewStatus, modal },
+      createComment,
+      removeComment,
+      state: {
+        background,
+        title,
+        year,
+        rating,
+        reviewStatus,
+        modal,
+        comment,
+        username,
+      },
     } = this;
     return (
       <div className="Detail">
@@ -48,52 +76,20 @@ export default class Detail extends Component {
           changeStatus={changeReviewStatus}
           openModal={openModal}
         />
-        <section className="DetailContainer">
-          <div className="DetailWrapper">
-            <div className="DetailItem">
-              <div className="selfCommentBlock">
-                <section className="leaveCommentBlock">
-                  <h3 className="title">대단한 작품이군요!</h3>
-                  <div className="buttonBlock">
-                    <button>코멘트 남기기</button>
-                  </div>
-                </section>
-              </div>
-              <div className="contentsBlock">
-                <div className="contentsMain">
-                  <ContentsContainer></ContentsContainer>
-                  <ContentsContainer></ContentsContainer>
-                  <ContentsContainer></ContentsContainer>
-                  <ContentsContainer></ContentsContainer>
-                  <ContentsContainer></ContentsContainer>
-                </div>
-                <div className="contentsAside">
-                  <div className="contentsMedia">
-                    <div className="MediaItem"></div>
-                    <div className="MediaItem"></div>
-                    <div className="MediaItem"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="DetailItem">
-              <div className="Recommendation">
-                <div className="collectionContainer">
-                  <ContentsContainer>
-                    <Collection />
-                  </ContentsContainer>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <DetailContainer
+          reviewStatus={reviewStatus}
+          rating={rating}
+          comment={comment}
+          username={username}
+          openModal={openModal}
+        />
         <Footer />
         <div
           className="backScreen"
-          style={{ display: modal === "none" ? "none" : "block" }}
-          onClick={() => {
-            this.setState({ modal: "none" });
+          style={{
+            display: modal === "none" ? "none" : "block",
           }}
+          onClick={this.closeModel}
         >
           <div className="modalContainer">
             {modal === "review" && (
@@ -102,8 +98,21 @@ export default class Detail extends Component {
                 title={title}
                 year={year}
                 status={reviewStatus}
+                comment={comment}
                 changeStatus={changeReviewStatus}
+                openModal={openModal}
               />
+            )}
+            {modal === "comment" && (
+              <CommentModal
+                comment={comment}
+                title={title}
+                createComment={createComment}
+                openModal={openModal}
+              />
+            )}
+            {modal === "alert" && (
+              <AlertModal openModal={openModal} removeComment={removeComment} />
             )}
           </div>
         </div>

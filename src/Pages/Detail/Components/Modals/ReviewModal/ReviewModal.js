@@ -16,7 +16,15 @@ const buttonImages = {
 
 class ReviewModal extends Component {
   render() {
-    const { changeStatus, background, title, year, status } = this.props;
+    const {
+      changeStatus,
+      background,
+      title,
+      year,
+      status,
+      comment,
+      openModal,
+    } = this.props;
     const { wished, activeWished, watching, activeWatching } = buttonImages;
     return (
       <div className="ReviewModal">
@@ -44,6 +52,7 @@ class ReviewModal extends Component {
               }}
               status={status}
               changeStatus={changeStatus}
+              openModal={openModal}
               src={status === "wished" ? activeWished : wished}
             />
             <WatchingButton
@@ -53,18 +62,23 @@ class ReviewModal extends Component {
               }}
               status={status}
               changeStatus={changeStatus}
+              openModal={openModal}
               src={status === "watching" ? activeWatching : watching}
             />
           </div>
 
           <div className="columnActionButton">
-            <span className="actionText">코멘트 작성하기</span>
+            <span className="actionText" onClick={() => openModal("comment")}>
+              {comment ? "코멘트 수정하기" : "코멘트 작성하기"}
+            </span>
             <img
               alt="create comment"
               src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiM3ODc4NzgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTkuODU3IDE3Ljc4Nkw2IDIxdi00LjkxYy0xLjg0MS0xLjM3My0zLTMuMzY5LTMtNS41OUMzIDYuMzU4IDcuMDMgMyAxMiAzczkgMy4zNTggOSA3LjVjMCA0LjE0Mi00LjAzIDcuNS05IDcuNS0uNzM5IDAtMS40NTYtLjA3NC0yLjE0My0uMjE0eiIvPgo8L3N2Zz4K"
             />
           </div>
-          <div className="cancelButton">취소</div>
+          <div className="cancelButton" onClick={() => openModal("none")}>
+            취소
+          </div>
         </div>
       </div>
     );

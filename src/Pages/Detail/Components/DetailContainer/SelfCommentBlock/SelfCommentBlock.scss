@@ -1,0 +1,74 @@
+@import "../../../../../Styles/common.scss";
+
+.SelfCommentBlock {
+  background: $white;
+  border-color: $border-grey !important;
+  overflow: hidden;
+
+  .leaveCommentBlock {
+    background: $white;
+    padding: 25px 0 30px;
+    border-top: solid 1px $border-grey;
+    margin: 0 20px;
+
+    .commentText {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      color: #4a4a4a;
+      text-align: center;
+    }
+
+    .buttonBlock {
+      width: 254px;
+      margin: 0 auto;
+
+      button {
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        border: solid 1px #d2d2d2;
+        border-radius: 6px;
+        margin: 0;
+        text-align: center;
+        font-size: 17px;
+        color: #000000;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        background-color: $white;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include min719px {
+  .SelfCommentBlock {
+    margin: 0 0 12px;
+
+    .leaveCommentBlock {
+      @include center;
+      padding: 12px 0;
+      border-top: 0;
+
+      .commentText {
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 20px;
+        text-align: left;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@include min1023px {
+  .SelfCommentBlock {
+    border: 1px solid;
+    border-radius: 6px;
+  }
+}
