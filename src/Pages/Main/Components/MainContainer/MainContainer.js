@@ -28,7 +28,7 @@ export default class MainContainer extends Component {
     };
   }
   componentDidMount = () => {
-    fetch("http://10.58.5.76:8000/film/ranking?sp=watcha")
+    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -37,7 +37,7 @@ export default class MainContainer extends Component {
         });
       });
 
-    fetch("http://10.58.5.76:8000/film/ranking?sp=netflix")
+    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -45,7 +45,7 @@ export default class MainContainer extends Component {
         });
       });
 
-    fetch("http://10.58.5.76:8000/film/recommendation?way=person")
+    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -53,7 +53,7 @@ export default class MainContainer extends Component {
         });
       });
 
-    fetch("http://10.58.5.76:8000/film/recommendation?way=genre")
+    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -61,7 +61,7 @@ export default class MainContainer extends Component {
         });
       });
 
-    fetch("http://10.58.5.76:8000/film/recommendation?way=country")
+    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -95,7 +95,6 @@ export default class MainContainer extends Component {
       slidesUnit,
       removeYearNation,
     } = this.state;
-    console.log(collections);
     return (
       <section className="MainContainer">
         <MovieListSlider
