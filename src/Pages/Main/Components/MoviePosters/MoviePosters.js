@@ -20,10 +20,14 @@ export default class MoviePosters extends Component {
     this.setState({ currIndex: this.state.currIndex + 1 });
   };
 
-  render() {
+  calcEndIdx = () => {
     let endIndex = parseInt(this.props.filmsLength / this.props.slidesUnit);
     if (this.props.filmsLength % this.props.slidesUnit === 0) endIndex--;
 
+    return endIndex;
+  };
+
+  render() {
     const settings = {
       dots: false,
       infinite: false,
@@ -38,7 +42,7 @@ export default class MoviePosters extends Component {
         <SliderBtn
           type="nextArrow"
           move={this.goToNext}
-          state={this.state.currIndex === endIndex}
+          state={this.state.currIndex === this.calcEndIdx()}
         />
       ),
       speed: 800,
@@ -75,10 +79,11 @@ export default class MoviePosters extends Component {
                   title={el.title}
                   poster_url={el.poster_url}
                   year={el.year}
-                  countries={el.countries[0]}
+                  countries={el.countries[0].name}
                   avg_rating={el.avg_rating}
                   service_providers={el.service_providers}
                   removeYearNation={this.props.removeYearNation}
+                  removeRankBadge={this.props.removeRankBadge}
                 />
               );
             })}

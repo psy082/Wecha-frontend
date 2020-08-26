@@ -10,6 +10,7 @@ export default class MovieListSlider extends Component {
       movieTitle,
       slidesUnit,
       removeYearNation,
+      removeRankBadge,
     } = this.props;
     return (
       <div className="MovieListSlider">
@@ -21,6 +22,7 @@ export default class MovieListSlider extends Component {
           filmsLength={filmsLength}
           slidesUnit={slidesUnit}
           removeYearNation={removeYearNation}
+          removeRankBadge={removeRankBadge}
         />
       </div>
     );

@@ -12,7 +12,11 @@ export default class MainContainer extends Component {
       person: [],
       country: [],
       genre: [],
-      filmsLength: [],
+      watchaLength: [],
+      netflixLength: [],
+      personLength: [],
+      countryLength: [],
+      genreLength: [],
       collections: [],
       collectionsLength: [],
       movieTitle: [
@@ -25,47 +29,65 @@ export default class MainContainer extends Component {
       ],
       slidesUnit: [5, 6],
       removeYearNation: "removeYearNation",
+      removeRankBadge: "removeRankBadge",
     };
   }
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+    )
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           watcha: res.films,
-          filmsLength: res.films.length,
+          watchaLength: res.films.length,
         });
       });
 
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+    )
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           netflix: res.films,
+          netflixLength: res.films.length,
         });
       });
 
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+    )
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           person: res.films,
+          personLength: res.films.length,
+          personTitle: res.person,
         });
       });
 
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+    )
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           genre: res.films,
+          genreLength: res.films.length,
+          genreTitle: res.genre,
         });
       });
 
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
+    fetch(
+      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+    )
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           country: res.films,
+          countryLength: res.films.length,
+          countryTitle: res.country,
         });
       });
 
@@ -90,46 +112,55 @@ export default class MainContainer extends Component {
       genre,
       collections,
       collectionsLength,
-      filmsLength,
+      watchaLength,
+      netflixLength,
+      personLength,
+      countryLength,
+      genreLength,
       movieTitle,
       slidesUnit,
       removeYearNation,
+      removeRankBadge,
     } = this.state;
     return (
       <section className="MainContainer">
         <MovieListSlider
           films={watcha}
-          filmsLength={filmsLength}
+          filmsLength={watchaLength}
           movieTitle={movieTitle[0]}
           slidesUnit={slidesUnit[0]}
         />
         <MovieListSlider
           films={netflix}
-          filmsLength={filmsLength}
+          filmsLength={netflixLength}
           movieTitle={movieTitle[1]}
           slidesUnit={slidesUnit[0]}
         />
         <MovieListSlider
           films={person}
-          filmsLength={filmsLength}
+          filmsLength={personLength}
           movieTitle={movieTitle[2]}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
+          removeRankBadge={removeRankBadge}
         />
         <MovieListSlider
           films={country}
-          filmsLength={filmsLength}
+          filmsLength={countryLength}
           movieTitle={movieTitle[3]}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
+          removeRankBadge={removeRankBadge}
         />
         <MovieListSlider
           films={genre}
-          filmsLength={filmsLength}
-          movieTitle={movieTitle[4]}
+          filmsLength={genreLength}
+          movieTitle={this.state.genreTitle}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
+          removeRankBadge={removeRankBadge}
         />
+
         <CollectionSlider
           collections={collections}
           collectionsLength={collectionsLength}

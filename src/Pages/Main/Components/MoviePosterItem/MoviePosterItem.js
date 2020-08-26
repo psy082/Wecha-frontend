@@ -5,13 +5,15 @@ export default class MoviePosterItem extends Component {
   selectClass = (ottName, onlyOttName) => {
     let className = "ottBadge";
     const { service_providers } = this.props;
+    let sp_names = [];
 
-    if (
-      service_providers.includes("netflix") &&
-      service_providers.includes("watcha")
-    ) {
+    service_providers.forEach((sp) => {
+      sp_names.push(sp.name);
+    });
+
+    if (sp_names.includes("netflix") && sp_names.includes("watcha")) {
       className += ` ${ottName}`;
-    } else if (service_providers.includes(ottName)) {
+    } else if (sp_names.includes(ottName)) {
       className += ` ${onlyOttName}`;
     }
     return className;
@@ -26,6 +28,7 @@ export default class MoviePosterItem extends Component {
       countries,
       avg_rating,
       removeYearNation,
+      removeRankBadge,
     } = this.props;
     return (
       <li className="MoviePosterItem">
@@ -33,7 +36,7 @@ export default class MoviePosterItem extends Component {
           <div className="moviePosterImgContainer">
             <div className="posterImgItem">
               <img src={poster_url} />
-              <div className="rankBadge">{rank_num}</div>
+              <div className={`rankBadge ${removeRankBadge}`}>{rank_num}</div>
               <div className={this.selectClass("netflix", "netflix")}>
                 <img
                   src="https://images.watcha.net/updatable_images/2571/original/42e70f1bc34d7af54478a311983ecf6d3601eefa.png"
