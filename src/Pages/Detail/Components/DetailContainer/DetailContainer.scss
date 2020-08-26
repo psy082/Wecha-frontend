@@ -2,7 +2,7 @@
 
 .DetailContainer {
   overflow: hidden;
-  .DetailWrapper {
+  .detailWrapper {
     margin: 0 auto;
   }
 }
@@ -13,9 +13,9 @@
     display: flex;
     justify-content: center;
 
-    .DetailWrapper {
+    .detailWrapper {
       max-width: 640px;
-      .DetailItem {
+      .detailItem {
         float: left;
         width: 100%;
       }
@@ -25,10 +25,10 @@
 
 @include min1023px {
   .DetailContainer {
-    .DetailWrapper {
+    .detailWrapper {
       max-width: 976px;
       margin: 0 -8px;
-      .DetailItem {
+      .detailItem {
         float: left;
         width: 640px;
         padding: 0 8px;

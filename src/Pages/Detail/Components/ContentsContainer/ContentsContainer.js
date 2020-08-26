@@ -5,20 +5,16 @@ import "./ContentsContainer.scss";
 
 class ContentsContainer extends Component {
   render() {
+    const { title, button, rating, children } = this.props;
     return (
       <section className="ContentsContainer">
         <header className="contentsHeader">
-          <h2 className="title">{this.props.title}</h2>
-          {this.props.button ? (
-            <TopRightButton />
-          ) : this.props.rating ? (
-            <TopRightRatingStat rating={this.props.rating} />
-          ) : (
-            <></>
-          )}
+          <h2 className="title">{title}</h2>
+          {button && <TopRightButton />}
+          {rating && <TopRightRatingStat scores={rating} />}
         </header>
         <div className="contents">
-          {this.props.children}
+          {children}
           <hr className="divider" />
         </div>
       </section>
