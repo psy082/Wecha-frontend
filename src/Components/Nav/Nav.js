@@ -32,6 +32,7 @@ class Nav extends Component {
         if (res.access_token) {
           localStorage.setItem("token", res.access_token);
           alert("로그인 성공");
+          console.log(res);
           this.props.history.push("/");
           window.location.reload();
           this.setState({
@@ -51,6 +52,9 @@ class Nav extends Component {
     window.location.reload();
   };
 
+  goToUserProfile = () => {
+    this.props.history.push("/user/1");
+  };
   handleInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -83,7 +87,7 @@ class Nav extends Component {
   componentDidMount() {
     const token = localStorage.getItem("token");
     if (token) {
-      fetch("http://10.58.5.55:8000/user/profile", {
+      fetch("http://10.58.5.55:8000/user/info", {
         method: "GET",
         headers: {
           Authorization: token,
@@ -94,7 +98,7 @@ class Nav extends Component {
           if (token) {
             this.setState({
               isLogin: true,
-              profileImg: res.profile_url,
+              profileImg: res.user_profile,
             });
           }
         });
@@ -160,7 +164,11 @@ class Nav extends Component {
               <li>
                 {this.state.isLogin ? (
                   <button className="profileBtn">
-                    <img alt="" src={this.state.profileImg}></img>
+                    <img
+                      alt=""
+                      src={this.state.profileImg}
+                      onClick={this.goToUserProfile}
+                    ></img>
                   </button>
                 ) : (
                   <button className="signUpBtn" onClick={this.showSignUpModal}>

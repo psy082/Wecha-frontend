@@ -1,0 +1,42 @@
+@import "../../../../Styles/common.scss";
+
+.SliderBtn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(249, 249, 249);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
+  cursor: pointer;
+
+  &:hover {
+    .arrow {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    opacity: 0.4;
+  }
+}
+// 130px
+.prevArrow {
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  left: -18px;
+
+  & > img {
+    transform: rotate(180deg);
+  }
+}
+
+.nextArrow {
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  right: -5px;
+}
