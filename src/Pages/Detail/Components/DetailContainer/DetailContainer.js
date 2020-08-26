@@ -39,8 +39,8 @@ class DetailContainer extends Component {
               </div>
             </div>
           </div>
-          <div className="DetailItem">
-            <div className="Recommendation">
+          <div className="detailItem">
+            <div className="recommendation">
               <div className="collectionContainer">
                 <ContentsContainer></ContentsContainer>
               </div>

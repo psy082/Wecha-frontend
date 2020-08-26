@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-import TopRightButton from "./TopRightButton";
-import TopRightRatingStat from "./TopRightRatingStat";
 import "./ContentsContainer.scss";
 
 class ContentsContainer extends Component {
   render() {
-    const { title, button, rating, children } = this.props;
+    const { title, button, rating } = this.props;
+    console.log(title, button, rating);
     return (
       <section className="ContentsContainer">
         <header className="contentsHeader">
           <h2 className="title">{title}</h2>
-          {button && <TopRightButton />}
-          {rating && <TopRightRatingStat scores={rating} />}
+          {button && <span>button</span>}
+          {rating && <span>button</span>}
         </header>
         <div className="contents">
-          {children}
+          {this.props.children}
           <hr className="divider" />
         </div>
       </section>
