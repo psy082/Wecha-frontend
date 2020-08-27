@@ -49,24 +49,51 @@
           text-align: center;
         }
 
+        .removeRankBadge {
+          display: none;
+        }
+
         .ottBadge {
-          position: absolute;
-          top: 6px;
-          right: 6px;
-          bottom: 6px;
+          display: none;
           width: 30px;
           height: 30px;
           background-color: $white;
           border: 1px solid rgba(0, 0, 0, 0.07);
           border-radius: 50%;
+          box-sizing: content-box;
 
           & > img {
             position: absolute;
             top: 5px;
             right: 6px;
+            bottom: 6px;
             width: 20px;
             height: 20px;
           }
+        }
+
+        .netflix {
+          display: block;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+          bottom: 6px;
+        }
+
+        .watcha {
+          display: block;
+          position: absolute;
+          top: 6px;
+          right: 42px;
+          bottom: 6px;
+        }
+
+        .onlyWatcha {
+          display: block;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+          bottom: 6px;
         }
       }
     }
@@ -74,7 +101,7 @@
     .moviePosterInfo {
       margin: 5px 10px 0 0;
       text-align: left;
-      height: 66px;
+      height: 100%;
 
       .movieContentTitle {
         color: #292a32;
@@ -94,6 +121,10 @@
         line-height: 21px;
         padding-bottom: 1px;
         letter-spacing: normal;
+      }
+
+      .removeYearNation {
+        display: none;
       }
 
       .average {

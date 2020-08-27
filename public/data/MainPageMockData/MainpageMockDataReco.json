@@ -1,0 +1,421 @@
+{
+  "genre": "코미디",
+  "films": [
+    {
+      "id": 2315,
+      "title": "극한직업",
+      "year": 2018,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1547742906/dqcjjakz78fkti41ynw3.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        }
+      ]
+    },
+    {
+      "id": 2319,
+      "title": "겨울왕국 2",
+      "year": 2019,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1573834033/hturisv7pj5yrwtlsdqy.jpg",
+      "countries": [
+        {
+          "id": 231,
+          "name": "미국"
+        }
+      ],
+      "service_providers": []
+    },
+    {
+      "id": 2324,
+      "title": "7번방의 선물",
+      "year": 2012,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466142577/nbqlpscbr5ya0dquzdye.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2326,
+      "title": "알라딘",
+      "year": 2019,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1558922852/taywjfx5pxeko51gql95.jpg",
+      "countries": [
+        {
+          "id": 231,
+          "name": "미국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 47,
+          "name": "tving"
+        }
+      ]
+    },
+    {
+      "id": 2338,
+      "title": "겨울왕국",
+      "year": 2013,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466148147/me7i5jkb3i1uolm3mwun.jpg",
+      "countries": [
+        {
+          "id": 231,
+          "name": "미국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2342,
+      "title": "검사외전",
+      "year": 2015,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466398082/y94rf4hz65wmmfy3awoi.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2343,
+      "title": "엑시트",
+      "year": 2019,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1563425385/nnn8uacw69srz8bafc41.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        }
+      ]
+    },
+    {
+      "id": 2348,
+      "title": "해적: 바다로 간 산적",
+      "year": 2014,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466149865/a3qzotpvqhgg9bw0aknn.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2349,
+      "title": "수상한 그녀",
+      "year": 2013,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466153114/cglguru2rvqaoxw5brzx.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2350,
+      "title": "국가대표",
+      "year": 2009,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466061012/vs2xdah57o5etfhv2tmg.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        }
+      ]
+    },
+    {
+      "id": 2351,
+      "title": "타짜",
+      "year": 2006,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466060146/nedubiqvkzxlfjwsmi7h.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2353,
+      "title": "과속스캔들",
+      "year": 2008,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064535/nwxx2spbikftjsq1elb1.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": []
+    },
+    {
+      "id": 2354,
+      "title": "스파이더맨: 파 프롬 홈",
+      "year": 2019,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1561478929/dzxsy0le05mb0rbjj7cc.jpg",
+      "countries": [
+        {
+          "id": 231,
+          "name": "미국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2355,
+      "title": "웰컴 투 동막골",
+      "year": 2005,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466065293/oz1k7get8qjo1er4baqa.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        }
+      ]
+    },
+    {
+      "id": 2364,
+      "title": "써니",
+      "year": 2011,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466074116/nopa0aierwf1j3swpomq.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2374,
+      "title": "럭키",
+      "year": 2015,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1474510334/r31zhpmcwcckkjldsky4.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        },
+        {
+          "id": 48,
+          "name": "netflix"
+        }
+      ]
+    },
+    {
+      "id": 2375,
+      "title": "은밀하게 위대하게",
+      "year": 2013,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466141132/nfphugvmfvrwv8rsct1l.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        },
+        {
+          "id": 47,
+          "name": "tving"
+        }
+      ]
+    },
+    {
+      "id": 2378,
+      "title": "가문의 위기 - 가문의 영광 2",
+      "year": 2005,
+      "avg_rating": "0.0",
+      "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466073268/lxb11byvbq3exovgbmpc.jpg",
+      "countries": [
+        {
+          "id": 230,
+          "name": "한국"
+        }
+      ],
+      "service_providers": [
+        {
+          "id": 46,
+          "name": "watcha"
+        }
+      ]
+    }
+  ]
+}

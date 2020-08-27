@@ -1,0 +1,10 @@
+@import "../../../../../Styles/common.scss";
+
+.CollectionPosters {
+  max-width: 1320px;
+  margin: 0 auto;
+
+  .collectionPoster {
+    white-space: nowrap;
+  }
+}

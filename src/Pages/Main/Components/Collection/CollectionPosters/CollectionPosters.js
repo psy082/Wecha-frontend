@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import MoviePosterItem from "../MoviePosterItem/MoviePosterItem";
+import CollectionItem from "../CollectionItem/CollectionItem";
 import Slider from "react-slick";
-import SliderBtn from "../SliderBtn/SliderBtn";
-import "./MoviePosters.scss";
+import SliderBtn from "../../SliderBtn/SliderBtn";
+import "./CollectionPosters.scss";
 
-export default class MoviePosters extends Component {
+export default class CollectionPosters extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,8 +21,10 @@ export default class MoviePosters extends Component {
   };
 
   calcEndIdx = () => {
-    let endIndex = parseInt(this.props.filmsLength / this.props.slidesUnit);
-    if (this.props.filmsLength % this.props.slidesUnit === 0) endIndex--;
+    let endIndex = parseInt(
+      this.props.collectionsLength / this.props.slidesUnit
+    );
+    if (this.props.collectionsLength % this.props.slidesUnit === 0) endIndex--;
 
     return endIndex;
   };
@@ -68,22 +70,15 @@ export default class MoviePosters extends Component {
     };
 
     return (
-      <div className="MoviePosters">
-        <ul className="moviePoster">
+      <div className="CollectionPosters">
+        <ul className="collectionPoster">
           <Slider {...settings}>
-            {this.props.films.map((el, idx) => {
+            {this.props.collections.map((el) => {
               return (
-                <MoviePosterItem
+                <CollectionItem
                   key={el.id}
-                  rank_num={idx + 1}
-                  title={el.title}
-                  poster_url={el.poster_url}
-                  year={el.year}
-                  countries={el.countries[0].name}
-                  avg_rating={el.avg_rating}
-                  service_providers={el.service_providers}
-                  removeYearNation={this.props.removeYearNation}
-                  removeRankBadge={this.props.removeRankBadge}
+                  name={el.name}
+                  poster_urls={el.poster_urls}
                 />
               );
             })}
