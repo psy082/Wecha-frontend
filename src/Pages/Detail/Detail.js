@@ -9,25 +9,128 @@ import ReviewModal from "./Components/Modals/ReviewModal/ReviewModal";
 
 import "./Detail.scss";
 
+const BASE_URL = "http://10.58.3.213:8000";
+
+const convertReviewType = (type) => {
+  switch (type) {
+    case "W":
+      return "wished";
+    case "M":
+      return "watching";
+    default:
+      return "none";
+  }
+};
+
+const classifyImages = (images, poster) => {
+  const classified = {
+    gallary: [],
+    videos: [],
+  };
+  classified.poster = poster;
+  for (const image of images) {
+    if (image.film_url_type === "B") classified.background = image.film_url;
+    if (image.film_url_type === "G") classified.gallary.push(image.film_url);
+    if (image.film_url_type === "T") classified.videos.push(image.film_url);
+  }
+
+  return classified;
+};
+
 export default class Detail extends Component {
   state = {
-    background:
-      "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1540367646/qesatzihqna0pi7e3vov.jpg",
-    title: "흐르는 강물처럼",
-    year: 1992,
-    rating: 2.5,
-    reviewStatus: "none",
     modal: "none",
-    comment: "",
-    username: "김동호",
+    selfReview: {},
+    urls: {},
+    images: {},
+    casts: {},
+    scores: {},
+    reviews: {},
+  };
+
+  componentDidMount() {
+    this.getMockData();
+  }
+
+  updateData = (id) => {
+    fetch(`${BASE_URL}/film/${id}`)
+      .then((res) => res.json())
+      .then(
+        ({
+          film,
+          urls,
+          casts,
+          reviews,
+          score_counts,
+          authenticated_user_review,
+        }) =>
+          this.setState(
+            {
+              movie: film,
+              urls,
+              casts,
+              reviews,
+              scores: score_counts,
+              selfReview: authenticated_user_review,
+            },
+            () => {
+              this.convertReviewValue();
+              this.arrangeImages();
+            }
+          )
+      );
+  };
+
+  getMockData = () => {
+    fetch("http://localhost:3000/data/DetailPageMockData/mockDetail.json")
+      .then((res) => res.json())
+      .then(
+        ({
+          film,
+          urls,
+          casts,
+          reviews,
+          score_counts,
+          authenticated_user_review,
+        }) =>
+          this.setState(
+            {
+              movie: film,
+              urls,
+              casts,
+              reviews,
+              scores: score_counts,
+              selfReview: authenticated_user_review,
+            },
+            () => {
+              this.convertReviewValue();
+              this.arrangeImages();
+            }
+          )
+      );
+  };
+
+  arrangeImages = () => {
+    const images = classifyImages(this.state.urls, this.state.movie.poster_url);
+    this.setState({ images });
+  };
+
+  convertReviewValue = () => {
+    const selfReview = { ...this.state.selfReview };
+    selfReview.review_type = convertReviewType(selfReview.review_type);
+    this.setState({ selfReview });
   };
 
   changeRating = (rating) => {
-    this.setState({ rating });
+    const selfReview = { ...this.state.selfReview };
+    selfReview.score = rating;
+    this.setState({ selfReview });
   };
 
   changeReviewStatus = (reviewStatus) => {
-    this.setState({ reviewStatus });
+    const selfReview = { ...this.state.selfReview };
+    selfReview.review_type = reviewStatus;
+    this.setState({ selfReview });
   };
 
   openModal = (modal) => {
@@ -41,11 +144,15 @@ export default class Detail extends Component {
 
   createComment = (comment) => {
     if (!comment) return;
-    this.setState({ comment: comment.trim() });
+    const selfReview = { ...this.state.selfReview };
+    selfReview.comment = comment.trim();
+    this.setState({ selfReview });
   };
 
   removeComment = () => {
-    this.setState({ comment: "" });
+    const selfReview = { ...this.state.selfReview };
+    selfReview.comment = "";
+    this.setState({ selfReview });
   };
 
   render() {
@@ -56,31 +163,38 @@ export default class Detail extends Component {
       createComment,
       removeComment,
       state: {
-        background,
-        title,
-        year,
-        rating,
-        reviewStatus,
+        movie,
+        images,
+        casts,
+        scores,
+        reviews,
+        selfReview: { score, review_type, comment, user },
         modal,
-        comment,
-        username,
       },
     } = this;
+
     return (
       <div className="Detail">
         <Nav />
         <DetailHeader
-          rating={rating}
+          movie={movie}
+          images={images}
+          rating={score}
           changeRating={changeRating}
-          status={reviewStatus}
+          status={review_type}
           changeStatus={changeReviewStatus}
           openModal={openModal}
         />
         <DetailContainer
-          reviewStatus={reviewStatus}
-          rating={rating}
+          movie={movie}
+          images={images}
+          casts={casts}
+          scores={scores}
+          reviews={reviews}
+          reviewStatus={review_type}
+          rating={score}
           comment={comment}
-          username={username}
+          user={user}
           openModal={openModal}
         />
         <Footer />
@@ -94,10 +208,10 @@ export default class Detail extends Component {
           <div className="modalContainer">
             {modal === "review" && (
               <ReviewModal
-                background={background}
-                title={title}
-                year={year}
-                status={reviewStatus}
+                background={movie.poster_url}
+                title={movie.korean_title}
+                year={movie.year}
+                status={review_type}
                 comment={comment}
                 changeStatus={changeReviewStatus}
                 openModal={openModal}
@@ -106,7 +220,7 @@ export default class Detail extends Component {
             {modal === "comment" && (
               <CommentModal
                 comment={comment}
-                title={title}
+                title={movie.korean_title}
                 createComment={createComment}
                 openModal={openModal}
               />

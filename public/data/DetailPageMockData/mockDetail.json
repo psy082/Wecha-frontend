@@ -1,0 +1,371 @@
+{
+  "film": {
+    "id": 2505,
+    "korean_title": "라라랜드",
+    "original_title": "La La Land",
+    "year": 2016,
+    "running_time_hour": 2,
+    "running_time_minute": 6,
+    "description": "황홀한 사랑, 순수한 희망, 격렬한 열정… 이 곳에서 모든 감정이 폭발한다.\n꿈을 꾸는 사람들을 위한 별들의 도시 ‘라라랜드’\n재즈 피아니스트 ‘세바스찬’(라이언 고슬링)과 성공을 꿈꾸는 배우 지망생 ‘미아’(엠마 스톤)\n인생에서 가장 빛나는 순간 만난 두 사람은 미완성인 서로의 무대를 만들어가기 시작한다.",
+    "poster_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1480382093/ha1knjr9iilixtwkltpw.jpg",
+    "avg_rating": "0.0",
+    "countries": [
+      {
+        "id": 231,
+        "name": "미국"
+      }
+    ],
+    "genres": [
+      {
+        "id": 292,
+        "name": "코미디"
+      },
+      {
+        "id": 289,
+        "name": "드라마"
+      },
+      {
+        "id": 310,
+        "name": "음악"
+      },
+      {
+        "id": 300,
+        "name": "로맨스"
+      }
+    ],
+    "service_providers": [
+      {
+        "id": 46,
+        "name": "watcha"
+      },
+      {
+        "id": 47,
+        "name": "tving"
+      }
+    ]
+  },
+  "urls": [
+    {
+      "id": 20493,
+      "film_url_type": "B",
+      "film_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_720,q_80,w_1280/v1574318600/s4q4hyux7tfq5wuybfcp.jpg"
+    },
+    {
+      "id": 20494,
+      "film_url_type": "G",
+      "film_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_360,q_80,w_640/v1574318600/s4q4hyux7tfq5wuybfcp.jpg"
+    },
+    {
+      "id": 20495,
+      "film_url_type": "G",
+      "film_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_360,q_80,w_640/v1555998079/mxmfw8onmd0lfkzbwkjp.jpg"
+    },
+    {
+      "id": 20496,
+      "film_url_type": "G",
+      "film_url": "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_360,q_80,w_640/v1555996474/vdh8kxbcpnp4cyz5qy7s.jpg"
+    },
+    {
+      "id": 20497,
+      "film_url_type": "T",
+      "film_url": "https://img.youtube.com/vi/Dt5hFexM5BI/0.jpg"
+    },
+    {
+      "id": 20498,
+      "film_url_type": "V",
+      "film_url": "https://www.youtube.com/watch?v=Dt5hFexM5BI"
+    },
+    {
+      "id": 20499,
+      "film_url_type": "T",
+      "film_url": "https://img.youtube.com/vi/76ULWmMfHcU/0.jpg"
+    },
+    {
+      "id": 20500,
+      "film_url_type": "V",
+      "film_url": "https://www.youtube.com/watch?v=76ULWmMfHcU"
+    }
+  ],
+  "casts": [
+    {
+      "id": 57889,
+      "name": "데미언 셔젤",
+      "role": "감독",
+      "face_url": "https://images.watcha.net/people/medium/21e5021ca58b9729e214.jpg?1547535279"
+    },
+    {
+      "id": 57890,
+      "name": "라이언 고슬링",
+      "role": "주연",
+      "face_url": "https://images.watcha.net/people/medium/0951eb6ebbd43297b4fe.jpg?1547535288"
+    },
+    {
+      "id": 57891,
+      "name": "엠마 스톤",
+      "role": "주연",
+      "face_url": "https://images.watcha.net/people/medium/532c25eb6ace8a18eeb1.jpg?1547096015"
+    },
+    {
+      "id": 57892,
+      "name": "톰 에버렛 스콧",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/722132ef7fe7df304118.jpg?1566450119"
+    },
+    {
+      "id": 57893,
+      "name": "올리비아 해밀턴",
+      "role": "조연",
+      "face_url": null
+    },
+    {
+      "id": 57894,
+      "name": "존 레전드",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/3069358a48aa929a65aa.jpg?1571970955"
+    },
+    {
+      "id": 57895,
+      "name": "J.K. 시몬스",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/8505316659234ab0f01d.jpg?1552041634"
+    },
+    {
+      "id": 57896,
+      "name": "로즈마리 드윗",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/490eb9f6235810e83b1d.jpg?1580275172"
+    },
+    {
+      "id": 57897,
+      "name": "소노야 미즈노",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/af704ad187c79e4a61fa.jpg?1556003307"
+    },
+    {
+      "id": 57898,
+      "name": "핀 위트록",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/ebd3e46f4722cc14bca3.jpg?1561100515"
+    },
+    {
+      "id": 57899,
+      "name": "제이슨 푸치스",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/70f9e4e1e5bcb349ec98.jpg?1571975117"
+    },
+    {
+      "id": 57900,
+      "name": "메건 페이",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/bbac2be6de96ad5c7ddd.jpg?1595211238"
+    },
+    {
+      "id": 57901,
+      "name": "제시카 로테",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/12c9cd33ba8171a04d74.jpg?1557453698"
+    },
+    {
+      "id": 57902,
+      "name": "마일즈 앤더슨",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/6e7e39b16f6fa0a28e6a.jpg?1562050312"
+    },
+    {
+      "id": 57903,
+      "name": "트레버 리자우어",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/f0600db3736327c7a465.jpg?1588566273"
+    },
+    {
+      "id": 57904,
+      "name": "칼리 헤르난데스",
+      "role": "조연",
+      "face_url": "https://images.watcha.net/people/medium/349b09376ca70f2bb0a6.jpg?1567986876"
+    }
+  ],
+  "collections": [
+    {
+      "id": 4814,
+      "name": "인셉션 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1578965504/apfhyvzm1318qu0ihejc.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466072468/ekcwqv6yqedwm8tqjhuh.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466074148/lvn09r4q9usuvaak6yxy.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466065534/fix4a3kgiytzsgcq0xf5.jpg"
+      ]
+    },
+    {
+      "id": 4828,
+      "name": "2012 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466071093/ayjewjzssiowxhdbdmnm.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1480382093/ha1knjr9iilixtwkltpw.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466065541/oclqxpfirvrfnrkbiunm.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466402203/tnwgv8ejqljtlusmqynn.jpg"
+      ]
+    },
+    {
+      "id": 4845,
+      "name": "추격자 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1585019164/rlziyn5mipgadt4sg18t.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466143079/enwdxupabp9esjdaxy38.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1512636728/fvffmvke1mrjd8issvpb.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466398082/y94rf4hz65wmmfy3awoi.jpg"
+      ]
+    },
+    {
+      "id": 4888,
+      "name": "인디아나 존스: 크리스탈 해골의 왕국 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466067271/ltpmxffgmlj7hz3z4uy9.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466146980/xnjvtui6c8zsvkwebzg1.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1592874346/rhz9cwjoe5xxxncayhkj.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466077612/mj0swactdxosdyzhusl8.jpg"
+      ]
+    },
+    {
+      "id": 4917,
+      "name": "신기전 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466071917/dwxi3jlzobgwwahcfzkc.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1549620830/u12z5sc75bq2cklu6ytm.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1578965504/apfhyvzm1318qu0ihejc.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1480382093/ha1knjr9iilixtwkltpw.jpg"
+      ]
+    },
+    {
+      "id": 4926,
+      "name": "라라랜드 포함 영화 컬렉션",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      },
+      "poster_urls": [
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1480382093/ha1knjr9iilixtwkltpw.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466147104/z6wnslqrkcv3bs8z4ctx.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466145663/slt9uagr9a6xibucq3f8.jpg",
+        "https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466149255/rnbcmho5lrkngyoduz8a.jpg"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "review_type": "R",
+      "comment": "the most beautiful film I've ever seen!!",
+      "like_count": 0,
+      "score": "5.0",
+      "user": {
+        "id": 101,
+        "name": "test0",
+        "face_image_url": null
+      }
+    },
+    {
+      "id": 2,
+      "review_type": "R",
+      "comment": "I love it",
+      "like_count": 0,
+      "score": "5.0",
+      "user": {
+        "id": 102,
+        "name": "test1",
+        "face_image_url": null
+      }
+    },
+    {
+      "id": 3,
+      "review_type": "R",
+      "comment": "so so",
+      "like_count": 0,
+      "score": "2.5",
+      "user": {
+        "id": 103,
+        "name": "test2",
+        "face_image_url": null
+      }
+    },
+    {
+      "id": 4,
+      "review_type": "R",
+      "comment": "not bad",
+      "like_count": 0,
+      "score": "3.5",
+      "user": {
+        "id": 104,
+        "name": "test3",
+        "face_image_url": null
+      }
+    },
+    {
+      "id": 5,
+      "review_type": "R",
+      "comment": "very bad",
+      "like_count": 0,
+      "score": "1.0",
+      "user": {
+        "id": 105,
+        "name": "test4",
+        "face_image_url": null
+      }
+    }
+  ],
+  "score_counts": [
+    {
+      "score": "2.5",
+      "total": 1
+    },
+    {
+      "score": "3.5",
+      "total": 1
+    },
+    {
+      "score": "1.0",
+      "total": 1
+    },
+    {
+      "score": "5.0",
+      "total": 2
+    }
+  ],
+  "authenticated_user_review": {
+    "id": 1,
+    "review_type": "R",
+    "comment": "the most beautiful film I've ever seen!!",
+    "like_count": 0,
+    "score": "5.0",
+    "user": {
+      "id": 101,
+      "name": "test0",
+      "face_image_url": null
+    }
+  }
+}

@@ -3,9 +3,12 @@ import "./ThumbnailImage.scss";
 
 class ThumbnailImage extends Component {
   render() {
-    const { src } = this.props;
+    const { src, size } = this.props;
     return (
-      <div className="ThumbnailImage">
+      <div
+        className="ThumbnailImage"
+        style={{ width: size ? size : "56px", height: size ? size : "56px" }}
+      >
         <img
           alt="thumbnail"
           className="userImage"

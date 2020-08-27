@@ -1,5 +1,9 @@
 @import "../../Styles/common.scss";
 
+body {
+  background: $background-grey;
+}
+
 .Detail {
   height: 200vh;
   position: relative;

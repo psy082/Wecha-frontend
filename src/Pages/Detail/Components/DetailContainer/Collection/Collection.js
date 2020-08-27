@@ -6,7 +6,7 @@ class Collection extends Component {
   render() {
     return (
       <li className="Collection">
-        <Link>
+        <Link to="#">
           <div className="posterBlock"></div>
           <div className="collectionInfo">
             <div className="collectionTitle"></div>

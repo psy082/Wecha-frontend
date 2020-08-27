@@ -1,2 +1,49 @@
+@import "../../../../Styles/common.scss";
+
 .ContentsContainer {
+  padding: 8px 0 0;
+
+  .contentsHeader {
+    margin: 0 20px;
+    overflow: hidden;
+
+    .contentstitle {
+      float: left;
+      margin: 8px 0;
+      color: #000;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.7px;
+      line-height: 28px;
+    }
+
+    .topRight {
+      float: right;
+
+      .viewMore {
+        margin: 12px 0;
+        color: #ff2f6e;
+      }
+
+      .ratingStatHeader {
+        margin-top: 10px;
+        color: #282828;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        text-align: right;
+      }
+    }
+  }
+
+  .contents {
+    margin: 0 20px;
+
+    .divider {
+      border: 0;
+      margin: 20px 0 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
 }
