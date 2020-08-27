@@ -1,3 +1,112 @@
 @import "../../Styles/common.scss";
 
-.UserProfile {}
+.UserProfile {
+    @include center;
+    margin: 28px 0 38px;
+
+    .myPageContainer {
+        width: 638px;
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 5px;
+
+        .myPageBg {
+            position: relative;
+            width: 638px;
+            height: 204px;
+            background-image: url("/images/mypage/mypage_bg.jpg");
+            background-size: 25%;
+            background-position: 50% 45%;
+            background-repeat: repeat;
+            border-radius: 5px;
+
+            .myPageBgShadow {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                left: 0px;
+                height: 44px;
+                background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+                border-radius: 5px;
+            }
+        }
+
+        .sectionUser {
+            position: relative;
+            top: -20px;
+            width: 598px;
+            height: 124px;
+            margin: 0 auto;
+
+            .profileBtn {
+                background: none;
+                outline: none;
+                cursor: pointer;
+
+                img {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                }
+            }
+
+            .name {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 40px;
+            }
+
+            .msg {
+                font-size: 15px;
+                color: rgb(74, 74, 74);
+            }
+        }
+
+        .ratedMovie {
+            width: 598px;
+            margin: 0 auto;
+            border-top: 1px solid rgb(227, 227, 227);
+
+            h2 {
+                font-size: 17px;
+                margin: 10px 0 20px 0;
+
+                img {
+                    position: relative;
+                    top: 5px;
+                    margin-right: 5px;
+                }
+            }
+
+            .movieList {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                margin-bottom: 20px;
+            }
+
+            .movie {
+                width: 140px;
+                height: 247px;
+                cursor: pointer;
+
+                .poster {
+                    width: 140px;
+                    border-radius: 5px;
+                }
+
+                .title {
+                    margin: 6px 2px;
+                    font-size: 16px;
+                    color: rgb(41, 42, 50);
+                }
+
+                .rating {
+                    margin: 2px;
+                    font-size: 13px;
+                    color: rgb(255, 161, 54)
+                }
+            }
+        }
+    }
+}

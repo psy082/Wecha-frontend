@@ -22,7 +22,7 @@
 
   .loginContainer {
     width: 375px;
-    height: 559px;
+    height: 579px;
     padding-bottom: 60px;
     border-radius: 6px;
     background: white;
@@ -57,10 +57,9 @@
       flex-direction: column;
 
       input {
-        padding: 0;
         width: 80%;
-        letter-spacing: -0.7px;
         font-size: 16px;
+        letter-spacing: -0.7px;
         line-height: 21px;
         caret-color: rgb(255, 47, 110);
         background: transparent;
@@ -74,10 +73,10 @@
         &:focus {
           outline: none;
 
-          &~.checkIcon {
+          & ~ .checkIcon {
+            position: absolute;
             width: 32px;
             height: 32px;
-            position: absolute;
             top: 7px;
             right: 12px;
             background-image: url("/images/modal/check_icon.svg");
@@ -95,16 +94,15 @@
         align-items: center;
         width: 335px;
         height: 44px;
-        padding: 0px 12px;
         margin-top: 8px;
+        padding: 0px 12px;
         border-radius: 6px;
         background: rgb(245, 245, 245);
 
         .inputChecked {
-          padding: 0;
           width: 80%;
-          letter-spacing: -0.7px;
           font-size: 16px;
+          letter-spacing: -0.7px;
           line-height: 21px;
           caret-color: rgb(255, 47, 110);
           background: transparent;
@@ -118,12 +116,12 @@
           &:focus {
             outline: none;
 
-            &~.checkIcon {
-              width: 32px;
-              height: 32px;
+            & ~ .checkIcon {
               position: absolute;
               top: 7px;
               right: 12px;
+              width: 32px;
+              height: 32px;
               background-image: url("/images/modal/check_icon.svg");
               background-size: 23px;
               background-repeat: no-repeat;
@@ -132,6 +130,7 @@
             }
           }
         }
+
         input[name="pw"] {
           letter-spacing: 10px;
         }
@@ -143,19 +142,18 @@
         align-items: center;
         width: 335px;
         height: 44px;
-        padding: 0px 12px;
         margin-top: 8px;
+        padding: 0px 12px;
         border: 1px solid red;
         border-radius: 6px;
         background: rgb(255, 240, 240);
 
         .inputChecked {
           width: 80%;
-          padding: 0;
           line-height: 21px;
           font-weight: 400;
-          letter-spacing: -0.7px;
           font-size: 16px;
+          letter-spacing: -0.7px;
           caret-color: rgb(255, 47, 110);
           background: transparent;
           border: none;
@@ -167,12 +165,12 @@
           &:focus {
             outline: none;
 
-            &~.checkIcon {
-              width: 32px;
-              height: 32px;
+            & ~ .checkIcon {
               position: absolute;
               top: 7px;
               right: 12px;
+              width: 32px;
+              height: 32px;
               background-image: url("/images/modal/warning_icon.svg");
               background-size: 23px;
               background-repeat: no-repeat;
@@ -186,13 +184,12 @@
   }
 
   .loginBtn {
-    color: rgb(255, 255, 255);
-    text-align: center;
     width: 100%;
     height: 44px;
-    padding: 0px;
     margin: 16px 0px 25px;
+    padding: 0px;
     font-size: 16px;
+    text-align: center;
     color: white;
     background: rgb(255, 47, 110);
     border-radius: 6px;
@@ -206,10 +203,10 @@
   }
 
   .forgetPw {
-    color: rgb(255, 47, 110);
+    margin-bottom: 20px;
     padding: 0px;
     font-size: 15px;
-    margin-bottom: 20px;
+    color: rgb(255, 47, 110);
     cursor: pointer;
   }
 
@@ -223,12 +220,9 @@
     color: rgb(140, 140, 140);
 
     a {
-      color: rgb(255, 47, 110);
       background: none;
-      padding: 0px;
-      margin: 0px;
+      color: rgb(255, 47, 110);
       cursor: pointer;
-      
 
       &:visited {
         color: rgb(255, 47, 110);
@@ -237,8 +231,8 @@
   }
 
   .hrText {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     top: 17px;
     padding: 0px 14px;
     font-size: 14px;
@@ -252,17 +246,17 @@
 
   hr {
     width: 330px;
-    border-top: 0px solid rgb(216, 216, 216);
     margin: 6px 0 38px;
+    border-top: 0px solid rgb(216, 216, 216);
   }
 
   .fbLoginBtn {
-    color: white;
     text-align: center;
     width: 335px;
     height: 44px;
     font-size: 16px;
     border-radius: 6px;
+    color: white;
     background: rgb(60, 90, 160);
     background-image: url("/images/modal/facebook_icon.svg");
     background-size: 23px;
@@ -275,9 +269,9 @@
 .hideLogin {
   @include center;
   position: fixed;
+  display: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  display: none;
 }

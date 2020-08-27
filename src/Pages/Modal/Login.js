@@ -10,25 +10,22 @@ class Login extends Component {
     };
   }
 
-  showLoginModal = (e) => {
-    e.preventDefault();
-    this.props.functionLoginModal();
-  };
-
   render() {
-    const btnValidation =
+    const loginValidate =
       this.props.email.includes("@") && this.props.password.length > 5;
-
     return (
       <div className={this.props.switchModal ? "hideLogin" : "Login"}>
-        <div className="loginBg" onClick={this.showLoginModal.bind(this)}></div>
+        <div className="loginBg" onClick={this.props.showLoginModal}></div>
         <div className="loginContainer">
           <header className="logo"></header>
           <h2 className="title">로그인</h2>
           <section className="loginContents">
             <div className="form">
               <div
-                className={this.props.decideState("email", this.props.email)}
+                className={this.props.loginDecideState(
+                  "email",
+                  this.props.email
+                )}
               >
                 <input
                   className={this.props.email ? "inputChecked" : "none"}
@@ -36,11 +33,12 @@ class Login extends Component {
                   placeholder="이메일"
                   name="email"
                   onChange={this.props.handleInput}
-                ></input>
+                  onKeyPress={this.props.handleLoginEnter}
+                />
                 <div className="checkIcon"></div>
               </div>
               <div
-                className={this.props.decideState(
+                className={this.props.loginDecideState(
                   "password",
                   this.props.password
                 )}
@@ -51,13 +49,14 @@ class Login extends Component {
                   placeholder="비밀번호"
                   name="password"
                   onChange={this.props.handleInput}
-                ></input>
+                  onKeyPress={this.props.handleLoginEnter}
+                />
                 <div className="checkIcon"></div>
               </div>
               <button
                 className="loginBtn"
                 onClick={this.props.loginFetch}
-                disabled={!btnValidation}
+                disabled={!loginValidate}
               >
                 로그인
               </button>
