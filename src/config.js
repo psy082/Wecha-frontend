@@ -1,3 +1,3 @@
-var API = "http://10.58.5.55:8000";
+var API = "http://18.223.188.215:8000";
 
 export default API;
