@@ -108,7 +108,15 @@
                     .rating {
                         margin: 2px 0;
                         font-size: 13px;
-                        color: rgb(255, 161, 54)
+                        color: rgb(255, 161, 54);
+
+                        .star {
+
+                            &:hover {
+                                color: red;
+                                transform: rotate(-90deg);
+                            }
+                        }
                     }
                 }
             }

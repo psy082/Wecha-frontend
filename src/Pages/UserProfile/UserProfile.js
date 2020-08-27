@@ -32,6 +32,9 @@ class UserProfile extends Component {
             });
           }
         });
+    } else {
+      alert("로그인을 해주세요");
+      this.props.history.push("/");
     }
   }
 
@@ -57,7 +60,8 @@ class UserProfile extends Component {
           </div>
           <div className="ratedMovie">
             <h2>
-              <img alt="" src="/images/mypage/rate.svg"></img>평가한 영화
+              <img alt="" src="/images/mypage/rate.svg" />
+              평가한 영화
             </h2>
             <div className="movieList">
               {this.state.movies.map((el) => {
@@ -66,7 +70,9 @@ class UserProfile extends Component {
                     <li>
                       <img className="poster" alt="movie" src={el.poster_url} />
                       <div className="title">{el.title}</div>
-                      <div className="rating">★{el.rating}</div>
+                      <div className="rating">
+                        평가함 <span className="star">★</span> {el.rating}
+                      </div>
                     </li>
                   </ul>
                 );
