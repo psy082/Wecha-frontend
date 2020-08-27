@@ -66,13 +66,11 @@ class UserProfile extends Component {
             <div className="movieList">
               {this.state.movies.map((el) => {
                 return (
-                  <ul className="movie">
+                  <ul className="movie" key={el.title}>
                     <li>
                       <img className="poster" alt="movie" src={el.poster_url} />
                       <div className="title">{el.title}</div>
-                      <div className="rating">
-                        평가함 <span className="star">★</span> {el.rating}
-                      </div>
+                      <div className="rating">평가함 ★ {el.rating}</div>
                     </li>
                   </ul>
                 );
