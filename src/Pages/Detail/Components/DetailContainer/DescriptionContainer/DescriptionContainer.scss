@@ -1,0 +1,41 @@
+@import "../../../../../Styles/common.scss";
+
+.DescriptionContainer {
+  .descriptionOverview {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    color: #4a4a4a;
+
+    .descriptionSummary {
+      margin: 8px 0;
+      color: #4a4a4a;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.2px;
+      line-height: 24px;
+    }
+    .descriptionOverviewMeta {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .descriptionText {
+    max-height: 72px;
+    margin: 0;
+    word-break: break-all;
+    white-space: pre-wrap;
+    color: #4a4a4a;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+}

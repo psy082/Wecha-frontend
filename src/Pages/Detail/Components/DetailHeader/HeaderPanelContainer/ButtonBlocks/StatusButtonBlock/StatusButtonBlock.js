@@ -3,7 +3,7 @@ import ArrowDownButton from "../../ArrowDownButton/ArrowDownButton";
 import "./StatusButtonBlock.scss";
 
 const getButtonComponent = (status) => {
-  let _status = {
+  const _status = {
     wished: {
       url:
         "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iI0ZGMkY2RSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01LjgzNCAyNi4xOTFjMCAuNzg4LjY0NiAxLjMzNiAxLjMzOCAxLjMzNi4yNiAwIC41MjctLjA3OC43NjgtLjI1TDE2IDIxLjUzOGw4LjA2IDUuNzRjLjI0Mi4xNzEuNTA4LjI1Ljc2OS4yNS42OTIgMCAxLjMzOC0uNTQ5IDEuMzM4LTEuMzM3VjguNjNhLjUuNSAwIDAgMC0uNS0uNUg2LjMzNGEuNS41IDAgMCAwLS41LjV2MTcuNTYyek0yNi4xNjcgNC4yOTRjMC0uNzM2LS41OTctMS4zMzMtMS4zMzMtMS4zMzNINy4xNjdjLS43MzYgMC0xLjMzMy41OTYtMS4zMzMgMS4zMzNWNi4xM2EuNS41IDAgMCAwIC41LjVoMTkuMzMzYS41LjUgMCAwIDAgLjUtLjVWNC4yOTR6Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K",
@@ -17,15 +17,17 @@ const getButtonComponent = (status) => {
   };
 
   return (
-    <div className="buttonInner">
-      <span
-        className="statusButton"
-        style={{
-          background: `url(${_status[status].url}) no-repeat center`,
-        }}
-      ></span>
-      <div className="buttonText">{_status[status].text}</div>
-    </div>
+    _status[status] && (
+      <div className="buttonInner">
+        <span
+          className="statusButton"
+          style={{
+            background: `url(${_status[status].url}) no-repeat center`,
+          }}
+        />
+        <div className="buttonText">{_status[status].text}</div>
+      </div>
+    )
   );
 };
 

@@ -1,0 +1,44 @@
+@import "../../../../../Styles/common.scss";
+
+.ContentsAside {
+  .contentsAsideWrapper {
+    background: $white;
+    border-color: #e3e3e3 !important;
+    overflow: hidden;
+
+    .prevArrow {
+      left: 8px;
+    }
+
+    .nextArrow {
+      right: 8px;
+    }
+
+    .slick-slide {
+      padding: 0 5px;
+    }
+  }
+}
+
+@include min719px {
+  .ContentsAside {
+    float: left;
+    width: 100%;
+
+    .contentsAsideWrapper {
+    }
+  }
+}
+
+@include min1023px {
+  .ContentsAside {
+    float: right;
+    width: 320px;
+    padding: 0 8px;
+
+    .contentsAsideWrapper {
+      border: 1px solid;
+      border-radius: 6px;
+    }
+  }
+}

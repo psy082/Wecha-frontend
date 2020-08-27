@@ -6,6 +6,8 @@ import "./DetailHeader.scss";
 class DetailHeader extends Component {
   render() {
     const {
+      movie,
+      images,
       rating,
       changeRating,
       status,
@@ -14,8 +16,12 @@ class DetailHeader extends Component {
     } = this.props;
     return (
       <header className="DetailHeader">
-        <HeaderPosterContainer />
+        <HeaderPosterContainer
+          background={images.background}
+          poster={images.poster}
+        />
         <HeaderPanelContainer
+          movie={movie}
           rating={rating}
           changeRating={changeRating}
           status={status}

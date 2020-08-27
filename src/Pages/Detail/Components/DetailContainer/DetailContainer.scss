@@ -2,8 +2,21 @@
 
 .DetailContainer {
   overflow: hidden;
+
   .detailWrapper {
     margin: 0 auto;
+
+    .detailItem {
+      .contentsBlock {
+        margin: 12px 0 0;
+
+        .contentsMain {
+          background: #fff;
+          border-color: #e3e3e3 !important;
+          overflow: hidden;
+        }
+      }
+    }
   }
 }
 
@@ -15,9 +28,14 @@
 
     .detailWrapper {
       max-width: 640px;
+
       .detailItem {
         float: left;
         width: 100%;
+
+        .contentsBlock {
+          margin: 0;
+        }
       }
     }
   }
@@ -28,10 +46,18 @@
     .detailWrapper {
       max-width: 976px;
       margin: 0 -8px;
+
       .detailItem {
         float: left;
         width: 640px;
         padding: 0 8px;
+
+        .contentsBlock {
+          .contentsMain {
+            border: 1px solid;
+            border-radius: 6px;
+          }
+        }
       }
     }
   }

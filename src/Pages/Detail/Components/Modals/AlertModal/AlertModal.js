@@ -5,13 +5,13 @@ class AlertModal extends Component {
   render() {
     const { openModal, removeComment } = this.props;
     return (
-      <div class="AlertModal">
+      <div className="AlertModal">
         <div className="alertWrapper">
-          <div class="alertTitle">알림</div>
-          <div class="alertMessage">코멘트를 삭제하시겠어요?</div>
-          <div class="alertButtons" onClick={() => openModal("none")}>
-            <button class="alertButton">취소</button>
-            <button class="alertButton" onClick={removeComment}>
+          <div className="alertTitle">알림</div>
+          <div className="alertMessage">코멘트를 삭제하시겠어요?</div>
+          <div className="alertButtons" onClick={() => openModal("none")}>
+            <button className="alertButton">취소</button>
+            <button className="alertButton" onClick={removeComment}>
               확인
             </button>
           </div>
