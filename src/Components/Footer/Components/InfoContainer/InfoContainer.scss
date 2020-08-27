@@ -1,0 +1,106 @@
+@import "../../../../Styles/common.scss";
+
+@mixin after {
+  content: "";
+  display: inline-block;
+  background: #848485;
+  vertical-align: top;
+  width: 1px;
+  height: 12px;
+  margin: 5px 8px 0;
+}
+
+.InfoContainer {
+  padding: 20px 0px 38px;
+  background-color: rgb(28, 29, 31);
+
+  .infoContainerPadding {
+    display: flex;
+    max-width: 1320px;
+    margin: 0 auto;
+
+    .infoContainerLeft {
+      flex: 1;
+
+      ul {
+        color: #a5a5a7;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        line-height: 22px;
+      }
+
+      a {
+        color: #a5a5a7;
+      }
+
+      .leftItemService {
+        display: flex;
+
+        li {
+          cursor: pointer;
+        }
+
+        li::after {
+          @include after();
+        }
+      }
+
+      .leftItemCScenter {
+        display: flex;
+        margin-top: 12px;
+
+        .CScenter {
+          &::after {
+            @include after();
+          }
+        }
+      }
+
+      .leftItemWork {
+        display: flex;
+
+        .work {
+          &::after {
+            @include after();
+          }
+        }
+      }
+
+      .leftItemCompanyAdress {
+        display: flex;
+        margin-top: 13px;
+        color: #848485;
+
+        .adress1,
+        .adress2 {
+          &::after {
+            @include after();
+          }
+        }
+      }
+
+      .leftItemCompanyNumber {
+        color: #848485;
+      }
+
+      .leftItemCompanyInfo {
+        display: flex;
+        margin-top: 2px;
+        color: #848485;
+
+        svg {
+          width: 83px;
+          height: 20px;
+
+          .fillTarget {
+            fill: rgb(132, 132, 133);
+          }
+        }
+        .CompanyInfoText {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}

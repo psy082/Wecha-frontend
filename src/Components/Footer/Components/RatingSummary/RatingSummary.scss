@@ -1,0 +1,21 @@
+@import "../../../../Styles/common.scss";
+
+.RatingSummary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  background-color: rgb(16, 17, 19);
+
+  .RatingSummaryText {
+    color: #d1d1d2;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 22px;
+
+    & > em {
+      color: #ff0558;
+    }
+  }
+}
