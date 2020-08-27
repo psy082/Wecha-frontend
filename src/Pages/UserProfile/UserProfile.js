@@ -25,7 +25,6 @@ class UserProfile extends Component {
         .then((res) => res.json())
         .then((res) => {
           if (token) {
-            console.log(res.user_review_films);
             this.setState({
               name: res.user_name,
               profileImg: res.user_profile,
