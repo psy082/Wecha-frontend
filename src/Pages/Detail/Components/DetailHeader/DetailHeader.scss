@@ -1,0 +1,14 @@
+@import "../../../../Styles/common.scss";
+
+$min1023: "(min-width: 1023px)";
+$min719: "(min-width: 719px)";
+
+.DetailHeader {
+  background: $white;
+}
+
+@include min719px {
+  .DetailHeader {
+    border-bottom: 1px solid $border-grey;
+  }
+}

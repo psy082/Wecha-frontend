@@ -13,7 +13,7 @@ class Routes extends React.Component {
           <Route exact path="/" component={Main} />
           <Route exact path="/contents/:id" component={Detail} />
           <Route exact path="/users/:id" component={UserProfile} />
-          <Route exact path="/Collection/:id" component={Collection} />
+          <Route exact path="/collection/:id" component={Collection} />
         </Switch>
       </Router>
     );

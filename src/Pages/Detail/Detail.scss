@@ -1,4 +1,42 @@
 @import "../../Styles/common.scss";
 
+body {
+  background: $background-grey;
+}
+
 .Detail {
+  height: 200vh;
+  position: relative;
+  background: $background-grey;
+
+  .backScreen {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.56);
+
+    .modalContainer {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      z-index: 101;
+    }
+
+    @include min719px {
+      .modalContainer {
+        @include center;
+        text-align: center;
+        padding: 20px 0px;
+        overflow: auto;
+      }
+    }
+  }
 }

@@ -10,6 +10,7 @@
   border: 1px solid rgb(249, 249, 249);
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
+  outline: none;
   cursor: pointer;
 
   &:hover {
@@ -22,7 +23,7 @@
     opacity: 0.4;
   }
 }
-// 130px
+
 .prevArrow {
   z-index: 1;
   position: absolute;
@@ -39,4 +40,8 @@
   position: absolute;
   top: 38%;
   right: -5px;
+}
+
+.hide {
+  display: none;
 }

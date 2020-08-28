@@ -1,0 +1,103 @@
+@import "../../../../../Styles/common.scss";
+
+.HeaderPanelContainer {
+  text-align: center;
+  padding: 14px 16px 22px;
+  margin: 0 auto;
+
+  .headerPanelWrapper {
+    .headerPanel {
+      .title {
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.9px;
+        line-height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .detail {
+        margin-top: 3px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+      }
+
+      .contentRating {
+        padding: 7px 0;
+        border-top: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        margin-top: 14px;
+        color: #282828;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  @include min719px {
+    .headerPanelWrapper {
+      .headerPanel {
+        margin-left: 173px;
+        text-align: left;
+        overflow: auto;
+
+        .title {
+          width: 520px;
+        }
+      }
+    }
+  }
+
+  @include min1023px {
+    .headerPanelWrapper {
+      padding: 0 8px;
+      margin: 1px -24px 0px;
+
+      .headerPanel {
+        overflow: auto;
+        margin-left: 191px;
+
+        .title {
+          font-size: 33px;
+          font-weight: 700;
+          letter-spacing: -1.2px;
+          line-height: 40px;
+        }
+
+        .detail {
+          margin-top: 4px;
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          line-height: 22px;
+        }
+
+        .contentRating {
+          padding: 8px 0;
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@include min719px {
+  .HeaderPanelContainer {
+    max-width: 640px;
+  }
+}
+
+@include min1023px {
+  .HeaderPanelContainer {
+    max-width: 960px;
+  }
+}

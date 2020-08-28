@@ -1,0 +1,83 @@
+@import "../../../../Styles/common.scss";
+
+@mixin after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI2E1YTVhNyIgZmlsbC1vcGFjaXR5PSIuODgiIGQ9Ik0xLjY2IDMuNjY3TDEwLjM0IDMuNjY3IDYgOC4wMDR6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyIDIpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=)
+    center no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.InfoContainerRight {
+  .languageContainer {
+    text-align: right;
+
+    .languageButton {
+      position: relative;
+      background: none;
+      width: 117px;
+      height: 30px;
+      padding: 2.5px 10px 4.5px;
+      border: solid 1px #848485;
+      border-radius: 2px;
+      color: #a5a5a7;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      line-height: 23px;
+      text-align: left;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        border-radius: 2px;
+      }
+      &::after {
+        @include after;
+      }
+    }
+  }
+  .footerLink {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 99px 0 -4px;
+
+    .footerLinkList {
+      padding-left: 14px;
+
+      & > a {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: top;
+      }
+
+      & > a > svg path {
+        fill: #848485;
+      }
+
+      & > a:hover > svg path {
+        fill: #a5a5a7;
+      }
+
+      .facebook {
+        width: 24px;
+        height: 24px;
+      }
+
+      .twitter {
+        width: 26px;
+        height: 26px;
+        padding: 5px;
+        border: 1px solid #848485;
+        border-radius: 50%;
+      }
+    }
+  }
+}

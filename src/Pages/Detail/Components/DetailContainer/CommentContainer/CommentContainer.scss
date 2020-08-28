@@ -1,0 +1,132 @@
+@import "../../../../../Styles/common.scss";
+
+.CommentContainer {
+  display: inline-block;
+  width: 100%;
+  padding: 0 5px;
+  vertical-align: top;
+
+  .commentWrapper {
+    background-color: #f2f2f2;
+    padding: 0 12px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .commentHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e5e5;
+      overflow: hidden;
+
+      .profileBlock {
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        overflow: hidden;
+
+        .commentUser {
+          margin-left: 10px;
+          margin-bottom: 2px;
+          color: #1f1f1f;
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          line-height: 22px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .userActionStatus {
+        display: flex;
+        align-items: center;
+        min-width: 55px;
+        height: 26px;
+        padding: 0 8px;
+        border: 1px solid #eaeaea;
+        border-radius: 13px;
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        line-height: 19px;
+        background: $white;
+
+        .starImage {
+          margin-right: 3px;
+          vertical-align: top;
+        }
+      }
+    }
+
+    .commentBlock {
+      position: relative;
+      height: 120px;
+      margin: 12px 0 15px;
+
+      .commentText {
+        max-height: 120px;
+        margin: 0;
+        word-break: break-all;
+        overflow: hidden;
+        white-space: pre-wrap;
+        opacity: 1;
+        overflow: hidden;
+        transition: opacity 400ms ease 0s;
+      }
+    }
+
+    .likeReplyBlock {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      color: #787878;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      line-height: 19px;
+      overflow: hidden;
+
+      .likeImage {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin: 0 3px;
+      }
+
+      em {
+      }
+    }
+
+    .userActionBlock {
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.7px;
+      line-height: 22px;
+      padding: 9.5px 0;
+      margin: 0 -4px;
+
+      .userActionButton {
+        padding: 0;
+        border: none;
+        padding: 2px 8px;
+        margin: 0;
+        color: #ff2f6e;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        background: none;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}

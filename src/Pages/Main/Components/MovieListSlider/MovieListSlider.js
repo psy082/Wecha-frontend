@@ -4,12 +4,26 @@ import "./MovieListSlider.scss";
 
 export default class MovieListSlider extends Component {
   render() {
+    const {
+      films,
+      filmsLength,
+      movieTitle,
+      slidesUnit,
+      removeYearNation,
+      removeRankBadge,
+    } = this.props;
     return (
       <div className="MovieListSlider">
         <div className="movieTitle">
-          <p className="movieTitleText">왓챠 영화 순위</p>
+          <p className="movieTitleText">{movieTitle}</p>
         </div>
-        <MoviePosters />
+        <MoviePosters
+          films={films}
+          filmsLength={filmsLength}
+          slidesUnit={slidesUnit}
+          removeYearNation={removeYearNation}
+          removeRankBadge={removeRankBadge}
+        />
       </div>
     );
   }

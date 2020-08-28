@@ -1,0 +1,64 @@
+@import "../../../../Styles/common.scss";
+
+.DetailContainer {
+  overflow: hidden;
+
+  .detailWrapper {
+    margin: 0 auto;
+
+    .detailItem {
+      .contentsBlock {
+        margin: 12px 0 0;
+
+        .contentsMain {
+          background: #fff;
+          border-color: #e3e3e3 !important;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+@include min719px {
+  .DetailContainer {
+    padding: 28px 0 48px;
+    display: flex;
+    justify-content: center;
+
+    .detailWrapper {
+      max-width: 640px;
+
+      .detailItem {
+        float: left;
+        width: 100%;
+
+        .contentsBlock {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@include min1023px {
+  .DetailContainer {
+    .detailWrapper {
+      max-width: 976px;
+      margin: 0 -8px;
+
+      .detailItem {
+        float: left;
+        width: 640px;
+        padding: 0 8px;
+
+        .contentsBlock {
+          .contentsMain {
+            border: 1px solid;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../../../Styles/common.scss";
+
+.AlertModal {
+  text-align: center;
+  width: 280px;
+  background: rgb(255, 255, 255);
+  padding: 20px 0px 0px;
+  border-radius: 8px;
+
+  .alertWrapper {
+    margin: 0 20px;
+
+    .alertTitle {
+      display: inline-block;
+      color: rgb(0, 0, 0);
+      white-space: pre-wrap;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 22px;
+    }
+
+    .alertMessage {
+      padding: 0px 0px 24px;
+      border-bottom: 1px solid rgb(210, 210, 210);
+      margin: 8px 0px 0px;
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .alertButtons {
+      display: flex;
+
+      .alertButton {
+        padding: 0px;
+        margin: 11px 0px;
+        flex: 1 1 0%;
+
+        color: rgb(255, 47, 110);
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 22px;
+        background: none;
+        outline: none;
+        cursor: pointer;
+
+        &:first-child {
+          border-right: 1px solid;
+          border-style: none solid none none;
+          border-color: rgb(210, 210, 210) !important;
+          border-image: initial;
+        }
+      }
+    }
+  }
+}

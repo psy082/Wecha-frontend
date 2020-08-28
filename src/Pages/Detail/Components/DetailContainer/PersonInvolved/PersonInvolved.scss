@@ -1,0 +1,55 @@
+@import "../../../../../Styles/common.scss";
+
+.PersonInvolved {
+  width: 100%;
+
+  .personWrapper {
+    display: flex;
+    align-items: center;
+    height: 76px;
+    color: inherit;
+
+    .personInfoBlock {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      height: 100%;
+      border-bottom: 1px solid #f0f0f0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .personInfo {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .personName {
+          color: #1e1e1e;
+          font-size: 17px;
+          font-weight: 400;
+          letter-spacing: -0.7px;
+          line-height: 22px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .personRole {
+          margin-top: 2px;
+          color: #8c8c8c;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: -0.3px;
+          line-height: 19px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

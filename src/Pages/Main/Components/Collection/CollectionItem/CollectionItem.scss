@@ -1,0 +1,67 @@
+@import "../../../../../Styles/common.scss";
+
+.CollectionItem {
+  display: inline-block;
+  width: 95%;
+  margin-right: 16px;
+
+  & > a {
+    width: 100%;
+
+    .collectionImgContainer {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding-bottom: 140%;
+      background-color: rgb(204, 205, 207);
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgb(221, 222, 223);
+      }
+
+      .posterImgItem {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+
+        .posterImgBox {
+          width: 50%;
+          padding: 2px;
+          box-sizing: border-box;
+
+          .posterImg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgb(196, 196, 196);
+            border-radius: 4px;
+
+            & > img {
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .collectionInfo {
+    height: 60px;
+    margin: 5px 10px 0 0;
+    color: rgb(41, 42, 50);
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}

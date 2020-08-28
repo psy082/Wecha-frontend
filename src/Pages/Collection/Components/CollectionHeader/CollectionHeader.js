@@ -25,7 +25,6 @@ class CollectionHeader extends Component {
   classSelect = (title, removeAndShowTitle) => {
     const { scrollData } = this.state;
     let classSelect = title;
-
     if (scrollData > 318) {
       classSelect += ` ${removeAndShowTitle}`;
     }
@@ -55,5 +54,4 @@ class CollectionHeader extends Component {
     );
   }
 }
-
 export default withRouter(CollectionHeader);

@@ -1,0 +1,110 @@
+@import "../../../../../Styles/common.scss";
+
+.RatingGraph {
+  margin: 0 20px;
+
+  .RatingGraphWrapper {
+    max-width: 375px;
+    margin: 58px auto 0;
+
+    .barsContainer {
+      display: flex;
+      align-items: flex-end;
+      margin: 0 -1px;
+      text-align: center;
+
+      .barArea {
+        flex: 1;
+        padding: 0 1px;
+
+        .normalBar {
+          position: relative;
+          display: block;
+          height: 1px;
+          margin: 0 0 22px;
+          color: #a0a0a0;
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: -0.2px;
+          line-height: 16px;
+          text-align: left;
+          background: #ffdd63;
+        }
+
+        &:nth-child(2) {
+          .numberBar::after {
+            content: "1";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -22px;
+            left: 0;
+            text-align: center;
+          }
+        }
+
+        &:nth-child(4) {
+          .numberBar::after {
+            content: "2";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -22px;
+            left: 0;
+            text-align: center;
+          }
+        }
+
+        &:nth-child(6) {
+          .numberBar::after {
+            content: "3";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -22px;
+            left: 0;
+            text-align: center;
+          }
+        }
+
+        &:nth-child(8) {
+          .numberBar::after {
+            content: "4";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -22px;
+            left: 0;
+            text-align: center;
+          }
+        }
+
+        &:nth-child(10) {
+          .numberBar::after {
+            content: "5";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -22px;
+            left: 0;
+            text-align: center;
+          }
+        }
+
+        .highestBar {
+          position: relative;
+          display: block;
+          height: 88px;
+          margin: 0 0 22px;
+          color: #a0a0a0;
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: -0.2px;
+          line-height: 16px;
+          text-align: left;
+          background: #ffa136;
+        }
+      }
+    }
+  }
+}

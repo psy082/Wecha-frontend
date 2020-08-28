@@ -8,46 +8,82 @@ export default class MoviePosters extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      currIndex: 0,
     };
   }
 
-  componentDidMount = () => {
-    fetch("http://localhost:3000/data/MainPageMockData/MainpageMockData.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          data: res.data,
-        });
-      });
+  goToPrev = () => {
+    this.setState({ currIndex: this.state.currIndex - 1 });
+  };
+
+  goToNext = () => {
+    this.setState({ currIndex: this.state.currIndex + 1 });
+  };
+
+  calcEndIdx = () => {
+    let endIndex = parseInt(this.props.filmsLength / this.props.slidesUnit);
+    if (this.props.filmsLength % this.props.slidesUnit === 0) endIndex--;
+
+    return endIndex;
   };
 
   render() {
     const settings = {
       dots: false,
       infinite: false,
-      prevArrow: <SliderBtn to="prevArrow" />,
-      nextArrow: <SliderBtn to="nextArrow" />,
+      prevArrow: (
+        <SliderBtn
+          type="prevArrow"
+          move={this.goToPrev}
+          state={this.state.currIndex === 0}
+        />
+      ),
+      nextArrow: (
+        <SliderBtn
+          type="nextArrow"
+          move={this.goToNext}
+          state={this.state.currIndex === this.calcEndIdx()}
+        />
+      ),
       speed: 800,
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: this.props.slidesUnit,
+      slidesToScroll: this.props.slidesUnit,
       initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+          },
+        },
+        {
+          breakpoint: 760,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          },
+        },
+      ],
     };
 
     return (
       <div className="MoviePosters">
         <ul className="moviePoster">
           <Slider {...settings}>
-            {this.state.data.map((el) => {
+            {this.props.films.map((el, idx) => {
               return (
                 <MoviePosterItem
                   key={el.id}
-                  korean_title={el.korean_title}
+                  rank_num={idx + 1}
+                  title={el.title}
                   poster_url={el.poster_url}
                   year={el.year}
-                  country={el.country[0]}
-                  avg_score={el.avg_score}
-                  service_provider={el.service_provider}
+                  countries={el.countries[0].name}
+                  avg_rating={el.avg_rating}
+                  service_providers={el.service_providers}
+                  removeYearNation={this.props.removeYearNation}
+                  removeRankBadge={this.props.removeRankBadge}
                 />
               );
             })}
