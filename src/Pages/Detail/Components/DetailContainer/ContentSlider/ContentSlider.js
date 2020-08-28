@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import SliderButton from "./SliderButton/SliderButton";
 import "./ContentSlider.scss";
 
@@ -27,7 +29,7 @@ export default class ContentSlider extends Component {
       slidesToShow,
       children,
     } = this.props;
-
+    console.log(this.props);
     let endIndex = parseInt(numberOfItems / (slidesRow * slidesToShow));
     if (numberOfItems % (slidesRow * slidesToShow) === 0) endIndex--;
 
