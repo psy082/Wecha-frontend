@@ -49,7 +49,6 @@ export default class Detail extends Component {
   };
 
   componentDidMount() {
-    console.log(localStorage.getItem("access_token"));
     this.updateData(this.props.match.params.id);
   }
 
@@ -125,7 +124,6 @@ export default class Detail extends Component {
   };
 
   changeRating = async (rating) => {
-    this.openRejectModal("rating");
     const selfReview = { ...this.state.selfReview };
     selfReview.score = rating;
     this.setState({ selfReview });
@@ -192,7 +190,6 @@ export default class Detail extends Component {
   };
 
   render() {
-    console.log(this.state);
     const {
       changeRating,
       changeReviewStatus,

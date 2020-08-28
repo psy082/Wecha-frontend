@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import ThumbnailImage from "../../../ThumbnailImage/ThumbnailImage";
 import "./MediaButtons.scss";
 
+class MediaButtons extends Component {
+  render() {
+    return (
+      <div className="MediaButtons">{getMediaButton(this.props.type)}</div>
+    );
+  }
+}
+
 const getMediaButton = (type) => {
   const media = {
     watcha: {
@@ -38,13 +46,5 @@ const getMediaButton = (type) => {
     </>
   );
 };
-
-class MediaButtons extends Component {
-  render() {
-    return (
-      <div className="MediaButtons">{getMediaButton(this.props.type)}</div>
-    );
-  }
-}
 
 export default MediaButtons;

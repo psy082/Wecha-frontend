@@ -35,7 +35,11 @@ class HeaderPanelContainer extends Component {
             ) : (
               <StatusButtonBlock status={status} openModal={openModal} />
             )}
-            <SelfRating rating={rating} changeRating={changeRating} />
+            <SelfRating
+              rating={rating}
+              changeRating={changeRating}
+              openRejectModal={openRejectModal}
+            />
           </div>
         </div>
       </div>
