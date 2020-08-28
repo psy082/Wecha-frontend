@@ -26,7 +26,6 @@ class RatingGraph extends Component {
 
   render() {
     const { scores, maxTotal } = this.state;
-    console.log(scores, maxTotal);
     return (
       <div className="RatingGraph">
         <div className="RatingGraphWrapper">

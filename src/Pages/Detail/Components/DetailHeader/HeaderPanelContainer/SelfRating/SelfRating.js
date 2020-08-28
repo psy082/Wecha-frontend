@@ -18,11 +18,13 @@ const titleByRating = {
 class SelfRating extends Component {
   constructor(props) {
     super(props);
-    this.state = { widthByRating: `${props.rating * 20}%` };
+    this.state = { widthByRating: props.rating ? `${props.rating * 20}%` : 0 };
   }
 
   initWidth = () => {
-    this.setState({ widthByRating: `${this.props.rating * 20}%` });
+    this.setState({
+      widthByRating: this.props.rating ? `${this.props.rating * 20}%` : 0,
+    });
   };
 
   traceMouse = (() => {
