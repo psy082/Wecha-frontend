@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./CollectionItem.scss";
 
 export default class CollectionItem extends Component {
   render() {
-    const { name, poster_urls } = this.props;
+    const { collection_id, name, poster_urls } = this.props;
     return (
       <li className="CollectionItem">
-        <a title={name} href="#">
+        <Link title={name} to={`/collection/${collection_id}`}>
           <div className="collectionImgContainer">
             <div className="posterImgItem">
               {poster_urls.map((el, idx) => {
@@ -23,7 +24,7 @@ export default class CollectionItem extends Component {
           <div className="collectionInfo">
             <p className="collectionInfoText">{name}</p>
           </div>
-        </a>
+        </Link>
       </li>
     );
   }

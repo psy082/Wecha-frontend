@@ -75,6 +75,7 @@ export default class MoviePosters extends Component {
               return (
                 <MoviePosterItem
                   key={el.id}
+                  movie_id={el.id}
                   rank_num={idx + 1}
                   title={el.title}
                   poster_url={el.poster_url}

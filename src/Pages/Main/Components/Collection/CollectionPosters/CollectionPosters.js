@@ -77,6 +77,7 @@ export default class CollectionPosters extends Component {
               return (
                 <CollectionItem
                   key={el.id}
+                  collection_id={el.id}
                   name={el.name}
                   poster_urls={el.poster_urls}
                 />

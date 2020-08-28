@@ -36,7 +36,7 @@ class Nav extends Component {
       .then((res) => res.json())
       .then((res) => {
         if (res.access_token) {
-          localStorage.setItem("token", res.access_token);
+          localStorage.setItem("access_token", res.access_token);
           alert("로그인 성공");
           this.props.history.push("/");
           this.setState({
@@ -136,7 +136,7 @@ class Nav extends Component {
   };
 
   componentDidMount() {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("access_token");
     if (token) {
       fetch(`${API}/user/info`, {
         method: "GET",

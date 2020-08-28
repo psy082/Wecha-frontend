@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./MoviePosterItem.scss";
 
 export default class MoviePosterItem extends Component {
@@ -11,9 +12,9 @@ export default class MoviePosterItem extends Component {
       sp_id.push(sp.id);
     });
 
-    if (sp_id.includes(48) && sp_id.includes(46)) {
+    if (sp_id.includes(48) && sp_id.includes(49)) {
       className += ` ${ottName}`;
-    } else if (sp_id.includes(48) || sp_id.includes(46)) {
+    } else if (sp_id.includes(48) || sp_id.includes(49)) {
       className += ` ${onlyOttName}`;
     }
     return className;
@@ -29,10 +30,11 @@ export default class MoviePosterItem extends Component {
       avg_rating,
       removeYearNation,
       removeRankBadge,
+      movie_id,
     } = this.props;
     return (
       <li className="MoviePosterItem">
-        <a title={title} href="#">
+        <Link title={title} to={`/contents/${movie_id}`}>
           <div className="moviePosterImgContainer">
             <div className="posterImgItem">
               <img src={poster_url} />
@@ -62,7 +64,7 @@ export default class MoviePosterItem extends Component {
               <span>{avg_rating}</span>
             </div>
           </div>
-        </a>
+        </Link>
       </li>
     );
   }
