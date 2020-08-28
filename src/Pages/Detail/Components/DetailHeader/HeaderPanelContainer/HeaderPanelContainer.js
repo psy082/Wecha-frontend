@@ -13,6 +13,7 @@ class HeaderPanelContainer extends Component {
       status,
       changeStatus,
       openModal,
+      openRejectModal,
     } = this.props;
 
     return movie ? (
@@ -29,11 +30,16 @@ class HeaderPanelContainer extends Component {
               <NomalButtonBlock
                 changeStatus={changeStatus}
                 openModal={openModal}
+                openRejectModal={openRejectModal}
               />
             ) : (
               <StatusButtonBlock status={status} openModal={openModal} />
             )}
-            <SelfRating rating={rating} changeRating={changeRating} />
+            <SelfRating
+              rating={rating}
+              changeRating={changeRating}
+              openRejectModal={openRejectModal}
+            />
           </div>
         </div>
       </div>

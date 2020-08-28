@@ -9,6 +9,11 @@ body {
   position: relative;
   background: $background-grey;
 
+  .Nav {
+    background: transparent;
+    z-index: 160;
+  }
+
   .backScreen {
     display: block;
     position: fixed;

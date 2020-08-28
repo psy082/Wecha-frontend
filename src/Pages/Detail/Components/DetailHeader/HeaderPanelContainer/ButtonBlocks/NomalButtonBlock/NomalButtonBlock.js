@@ -4,14 +4,20 @@ import "./NomalButtonBlock.scss";
 
 class NomalButtonBlock extends Component {
   render() {
-    const { changeStatus, openModal } = this.props;
+    const { changeStatus, openModal, openRejectModal } = this.props;
     return (
       <div className="NomalButtonBlock">
-        <div className="buttonBlockWrapper" onClick={() => openModal("review")}>
+        <div
+          className="buttonBlockWrapper"
+          onClick={() => {
+            openRejectModal("wished");
+            if (localStorage.getItem("access_token")) openModal("review");
+          }}
+        >
           <button
             className="actionButton"
             onClick={() => {
-              changeStatus("wished");
+              if (localStorage.getItem("access_token")) changeStatus("wished");
             }}
           >
             <div className="buttonInner">

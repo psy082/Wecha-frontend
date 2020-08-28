@@ -1,23 +1,9 @@
 import React, { Component } from "react";
 import "./HeaderPosterContainer.scss";
-import { createPortal } from "react-dom";
-const Vibrant = require("node-vibrant");
 
 class HeaderPosterContainer extends Component {
   state = {
     colors: [0, 0, 0],
-  };
-
-  async componentDidUpdate() {
-    if (!this.state.colors[0] && this.props.background) {
-      const colors = await this.extractGradientColors(this.props.background);
-      this.setState({ colors });
-    }
-  }
-
-  extractGradientColors = async (src) => {
-    const { LightMuted } = await Vibrant.from(src).getPalette();
-    return LightMuted._rgb;
   };
 
   render() {

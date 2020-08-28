@@ -13,6 +13,7 @@ class DetailHeader extends Component {
       status,
       changeStatus,
       openModal,
+      openRejectModal,
     } = this.props;
     return (
       <header className="DetailHeader">
@@ -27,6 +28,7 @@ class DetailHeader extends Component {
           status={status}
           changeStatus={changeStatus}
           openModal={openModal}
+          openRejectModal={openRejectModal}
         />
       </header>
     );

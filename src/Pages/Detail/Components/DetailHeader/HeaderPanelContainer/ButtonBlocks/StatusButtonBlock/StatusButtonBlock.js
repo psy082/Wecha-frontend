@@ -2,6 +2,22 @@ import React, { Component } from "react";
 import ArrowDownButton from "../../ArrowDownButton/ArrowDownButton";
 import "./StatusButtonBlock.scss";
 
+class StatusButtonBlock extends Component {
+  render() {
+    const { status, openModal } = this.props;
+    return (
+      <div className="StatusButtonBlock">
+        <div className="buttonBlockWrapper" onClick={() => openModal("review")}>
+          <button className="actionButton">{getButtonComponent(status)}</button>
+          <button className="openButton">
+            <ArrowDownButton fill={true} />
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
 const getButtonComponent = (status) => {
   const _status = {
     wished: {
@@ -30,21 +46,5 @@ const getButtonComponent = (status) => {
     )
   );
 };
-
-class StatusButtonBlock extends Component {
-  render() {
-    const { status, openModal } = this.props;
-    return (
-      <div className="StatusButtonBlock">
-        <div className="buttonBlockWrapper" onClick={() => openModal("review")}>
-          <button className="actionButton">{getButtonComponent(status)}</button>
-          <button className="openButton">
-            <ArrowDownButton fill={true} />
-          </button>
-        </div>
-      </div>
-    );
-  }
-}
 
 export default StatusButtonBlock;

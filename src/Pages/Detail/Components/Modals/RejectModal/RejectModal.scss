@@ -1,0 +1,149 @@
+@import "../../../../../Styles/common.scss";
+
+.RejectModal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+
+  .headerBarPrimitive {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    padding: 0px 16px;
+    border-width: 0px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    background: rgb(255, 255, 255);
+    z-index: 50;
+
+    .closeButtonBlock {
+      .closeButton {
+        width: 24px;
+        height: 24px;
+        padding: 0px;
+        margin: 10px 0px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9IiNGRjJGNkUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTIgMTIpIj4KICAgICAgICA8cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSIxOCIgeD0iMTEiIHk9IjMiIHJ4PSIxIi8+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjIiIHg9IjMiIHk9IjExIiByeD0iMSIvPgogICAgPC9nPgo8L3N2Zz4K);
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+  .rejectModalContainer {
+    height: 100%;
+    padding: 44px 0px 0px;
+    overflow-y: scroll;
+
+    .rejectModalWrapper {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+
+      .rejectModalBlock {
+        @include center;
+        flex-direction: column;
+        flex: 1;
+        margin: 0 20px;
+
+        .iconBlock {
+          text-align: center;
+          margin: 0px 0px 47px;
+
+          .iconImage {
+            display: inline-block;
+            vertical-align: top;
+            width: 88px;
+            height: 88px;
+          }
+        }
+
+        @include min1023px {
+          .iconBlock {
+            margin: 0px;
+          }
+        }
+
+        .textBlock {
+          font-size: 19px;
+          font-weight: 700;
+          letter-spacing: -0.7px;
+          line-height: 30px;
+          white-space: pre-line;
+          text-align: center;
+        }
+      }
+
+      .bottomButtonWrapper {
+        width: 100%;
+        margin: 0px 0px 63px;
+        text-align: center;
+
+        .bottomButtonBlock {
+          margin: 0 20px;
+
+          .signupButton {
+            width: 100%;
+            height: 44px;
+            padding: 0px;
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            border-radius: 6px;
+            margin: 0px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background: rgb(255, 47, 110);
+            cursor: pointer;
+            outline: none;
+          }
+
+          .loginButton {
+            padding: 0px;
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            margin: 19px 0px 0px;
+            color: rgb(255, 47, 110);
+            background: none;
+            cursor: pointer;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include min719px {
+  .RejectModal {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    width: 375px;
+    height: auto;
+    min-height: 540px;
+    border-radius: 6px;
+    overflow: auto;
+  }
+
+  .rejectModalContainer {
+    height: auto;
+    overflow: auto;
+  }
+}

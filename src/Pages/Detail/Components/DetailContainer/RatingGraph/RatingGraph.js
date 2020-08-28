@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import "./RatingGraph.scss";
 
-const setClassName = (score, total, maxTotal) => {
-  const nameTag = ["1.0", "2.0", "3.0", "4.0", "5.0"];
-  let className = total === maxTotal ? "highestBar" : "normalBar";
-  if (nameTag.includes(score)) className = className + " numberBar";
-  return className;
-};
-
 class RatingGraph extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +19,6 @@ class RatingGraph extends Component {
 
   render() {
     const { scores, maxTotal } = this.state;
-    console.log(scores, maxTotal);
     return (
       <div className="RatingGraph">
         <div className="RatingGraphWrapper">
@@ -48,5 +40,12 @@ class RatingGraph extends Component {
     );
   }
 }
+
+const setClassName = (score, total, maxTotal) => {
+  const nameTag = ["1.0", "2.0", "3.0", "4.0", "5.0"];
+  let className = total === maxTotal ? "highestBar" : "normalBar";
+  if (nameTag.includes(score)) className = className + " numberBar";
+  return className;
+};
 
 export default RatingGraph;
