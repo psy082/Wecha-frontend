@@ -15,6 +15,7 @@ export default class CollectionPage extends Component {
   componentDidMount() {
     fetch(
       "http://localhost:3000/data/MainPageMockData/CollectionPageMoctData.json"
+      // "http://18.223.188.215:8000/film/collections/1"
     )
       .then((res) => res.json())
       .then((res) => {

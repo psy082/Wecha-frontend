@@ -11,9 +11,9 @@ export default class CollectionPosterItem extends Component {
       sp_id.push(sp.id);
     });
 
-    if (sp_id.includes(48) && sp_id.includes(46)) {
+    if (sp_id.includes(1) && sp_id.includes(3)) {
       className += ` ${ottName}`;
-    } else if (sp_id.includes(48) || sp_id.includes(46)) {
+    } else if (sp_id.includes(1) || sp_id.includes(3)) {
       className += ` ${onlyOttName}`;
     }
     return className;
