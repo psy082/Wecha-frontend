@@ -4,12 +4,34 @@ import CollectionPosters from "../CollectionPosters/CollectionPosters";
 import "./CollectionPage.scss";
 
 export default class CollectionPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      CollectionData: [],
+      CollectionTitle: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch(
+      // "http://localhost:3000/data/MainPageMockData/CollectionPageMoctData.json"
+      "http://18.223.188.215:8000/film/collections/1"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          CollectionData: res.films,
+          CollectionTitle: res.collection,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="CollectionPage">
         <div className="CollectionPagePadding">
-          <CollectionHeader />
-          <CollectionPosters />
+          <CollectionHeader CollectionTitle={this.state.CollectionTitle} />
+          <CollectionPosters CollectionData={this.state.CollectionData} />
         </div>
       </div>
     );
