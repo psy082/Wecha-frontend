@@ -19,13 +19,7 @@ export default class MainContainer extends Component {
       genreLength: [],
       collections: [],
       collectionsLength: [],
-      movieTitle: [
-        "왓챠 영화 순위",
-        "넷플릭스 영화 순위",
-        "인물",
-        "국가",
-        "장르",
-      ],
+      movieTitle: ["왓챠 영화 순위", "넷플릭스 영화 순위"],
       slidesUnit: [5, 6],
       removeYearNation: "removeYearNation",
       removeRankBadge: "removeRankBadge",
@@ -37,7 +31,8 @@ export default class MainContainer extends Component {
 
   fetchFilms = () => {
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+      // "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+      "http://18.223.188.215:8000/film/ranking?sp=watcha"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -48,7 +43,8 @@ export default class MainContainer extends Component {
       });
 
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+      // "http://localhost:3000/data/MainPageMockData/MainpageMockDataRanking.json"
+      "http://18.223.188.215:8000/film/ranking?sp=netflix"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -59,7 +55,8 @@ export default class MainContainer extends Component {
       });
 
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      // "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      "http://18.223.188.215:8000/film/recommendation?way=person"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -71,7 +68,8 @@ export default class MainContainer extends Component {
       });
 
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      // "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      "http://18.223.188.215:8000/film/recommendation?way=genre"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -83,7 +81,8 @@ export default class MainContainer extends Component {
       });
 
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      // "http://localhost:3000/data/MainPageMockData/MainpageMockDataReco.json"
+      "http://18.223.188.215:8000/film/recommendation?way=country"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -95,7 +94,8 @@ export default class MainContainer extends Component {
       });
 
     fetch(
-      "http://localhost:3000/data/MainPageMockData/MainPageCollections.json"
+      // "http://localhost:3000/data/MainPageMockData/MainPageCollections.json"
+      "http://18.223.188.215:8000/film/collections"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -142,7 +142,7 @@ export default class MainContainer extends Component {
         <MovieListSlider
           films={person}
           filmsLength={personLength}
-          movieTitle={movieTitle[2]}
+          movieTitle={this.state.personTitle}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
           removeRankBadge={removeRankBadge}
@@ -150,7 +150,7 @@ export default class MainContainer extends Component {
         <MovieListSlider
           films={country}
           filmsLength={countryLength}
-          movieTitle={movieTitle[3]}
+          movieTitle={this.state.countryTitle}
           slidesUnit={slidesUnit[1]}
           removeYearNation={removeYearNation}
           removeRankBadge={removeRankBadge}
