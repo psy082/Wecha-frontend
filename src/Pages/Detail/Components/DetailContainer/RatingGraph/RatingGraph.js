@@ -19,21 +19,25 @@ class RatingGraph extends Component {
 
   render() {
     const { scores, maxTotal } = this.state;
+    delete scores["0.0"];
     return (
       <div className="RatingGraph">
         <div className="RatingGraphWrapper">
           <div className="barsContainer">
-            {Object.entries(scores).map(([score, total]) => (
-              <div key={`bar${score}`} className="barArea">
-                <span
-                  style={{
-                    height:
-                      total !== 0 ? `${88 * (total / maxTotal)}px` : "1px",
-                  }}
-                  className={setClassName(score, total, maxTotal)}
-                ></span>
-              </div>
-            ))}
+            {Object.entries(scores).map(
+              ([score, total]) =>
+                score && (
+                  <div key={`bar${score}`} className="barArea">
+                    <span
+                      style={{
+                        height:
+                          total !== 0 ? `${88 * (total / maxTotal)}px` : "1px",
+                      }}
+                      className={setClassName(score, total, maxTotal)}
+                    ></span>
+                  </div>
+                )
+            )}
           </div>
         </div>
       </div>

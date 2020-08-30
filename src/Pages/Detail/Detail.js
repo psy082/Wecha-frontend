@@ -208,7 +208,6 @@ export default class Detail extends Component {
         rejectType,
       },
     } = this;
-    console.log(this.state);
     return selfReview ? (
       <div className="Detail">
         <Nav />

@@ -29,7 +29,6 @@ export default class ContentSlider extends Component {
       slidesToShow,
       children,
     } = this.props;
-    console.log(this.props);
     let endIndex = parseInt(numberOfItems / (slidesRow * slidesToShow));
     if (numberOfItems % (slidesRow * slidesToShow) === 0) endIndex--;
 

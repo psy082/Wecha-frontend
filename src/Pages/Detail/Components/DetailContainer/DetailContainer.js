@@ -24,7 +24,6 @@ class DetailContainer extends Component {
       user,
       openModal,
     } = this.props;
-
     return (
       <section className="DetailContainer">
         <div className="detailWrapper">

@@ -30,7 +30,7 @@ class SelfRating extends Component {
 
   giveRating = ({ nativeEvent }, index) => {
     let rating = nativeEvent.offsetX > 20 ? index : index - 0.5;
-    if (this.props.rating === rating) this.props.changeRating(0);
+    if (Number(this.props.rating) === rating) this.props.changeRating(0);
     else this.props.changeRating(rating);
   };
 
