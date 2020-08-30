@@ -3,10 +3,12 @@
 ## 프로젝트 소개 및 목적
 
 - 소개: 영화, 드라마, 책 컨텐츠 평가 및 추천 사이트인 Watcha Pedia를 클론 코딩하는 프로젝트
-- 목적
-  1. github을 이용하여 프로젝트를 공동으로 관리해 본다.
-  2. React를 사용하여 데이터 통신, 컴포넌트 분리 및 관리, 컴포넌트 간 데이터 바인딩을 적용해 본다.
-  3. Sass를 사용하여 컴포넌트 단위로 스타일을 적용하고 관리해본다.
+- 목적[ [wecode 프로젝트 체크 리스트](https://www.notion.so/1-1b8841331cc64f43a859b84a40668a17)]
+  1. Progress: Scrum 진행 방식에 대해 이해하고 적용해며 프로젝트를 진행한다.
+  2. Communication: 협업 프로젝트를 통해 프론트 간의, 또한 백엔드와의 의사소통에서 필요한 내용들을 경험한다. 매일 아침 스탠드업 미팅을 가진다.
+  3. React: React를 사용하여 데이터 통신, 컴포넌트 분리 및 관리, 컴포넌트 간 데이터 바인딩을 적용해 본다.
+  4. Sass: Sass를 사용하여 컴포넌트 단위로 스타일을 적용하고 관리해본다. mixin의 기능을 다양하게 사용해 본다.
+  5. Network: fetch나 axios를 사용하여 서버 api에 요청하고 응답받은 데이터를 화면에 보여준다.
 
 ## 개발 기간
 
@@ -20,73 +22,53 @@
 
 ## 구현 페이지 및 기능
 
-- 메인 페이지
-
-- 상세 페이지
-
-- 로그인 및 회원가입 페이지
-
-- 검색 페이지
-
-- 사용자 프로필 페이지
-
-## 기술 스택
+1. 기술 스택
 
 - HTML, CSS, JS(es6+)
-- React, SASS
+- React(CRA 세팅), SASS(SCSS)
 
-## Process For Co-Work
+2. 협업 툴
 
-1. 초기 세팅된 git repository clone하기
+- Git
+- Slack
+- Trello
 
-`git clone https://github.com/wecode-bootcamp-korea/11-WeCha-frontend.git`
+3. 구현 기능 및 설명
 
-2. master branch에서 feature 브랜치 만들고 checkout하기
+### 네비게이션 바
 
-`git branch feature/페이지 or 기능`
+- 화면 크기에 따라 반응형으로 애니메이션 작동
+- 로그인 및 회원가입 버튼 클릭 시 로그인/회원가입 모달 창 생성
 
-`git checkout feature/페이지 or 기능`
+### 로그인 및 회원가입 모달 창
 
-3. <i><b>자기 브랜치에서만 작업하기(Master는 신성불가침의 영역이라고 합니다 하하)</b></i>
+- 로그인 시 서버에서 받은 액세스 토큰을 로컬 스토리지에 저장
+- 이메일, 패스워드 양식 확인 기능
 
-4. 작업 완료 후에 바로 add commit push를 하는 게 아니라 github을 확인한 후 master 브랜치가 update되었는지 확인하기(update가 되었다면 5번부터 읽기, 안되었다면 8번부터 읽기)
+### 메인 페이지
 
-5. 만약 master 브랜치가 update되었다면(혹시나 혹시나 common.scss가 update되었다면?!) master 브랜치로 checkout하기
+- 영화 정보 순위가 영화 포스터 좌 상단에 표시되는 기능
+- 슬라이더로 영화 기본 정보 표현
+- 슬라이더에서 첫 페이지 혹은 마지막 페이지의 경우 슬라이더 버튼이 사라지는 효과 적용
 
-`git checkout master`
+### 상세 페이지
 
-6. update된 코드 다운로드 받기
+- 보고싶어요 버튼 클릭 시 보고싶어요, 보는 중 상태 선택, 코멘트 작성을 할 수 있는 모달 창 생성
+- 보고싶어요, 보는 중 클릭 시 해당 상태 정보 서버에 송신
+- 마우스 움직임에 따라서 별점 변경 및 별점에 따른 문구도 변경
+- 별점 클릭시 서버에 별점 정보 송신, 별점 재클릭 시 주어진 별점 취소 및 취소 정보 송신
+- 코멘트 작성 시 코멘트 정보 서버에 송신
+- 코멘트 작성 시 작성된 코멘트를 보여주는 컴포넌트 생성, 생성된 컴포넌트에서 코멘트 수정, 삭제 버튼 제공
+- 코멘트 수정, 삭제 시 변경된 정보 서버에 송신
+- 영화 별점 정보 분포를 그래프로 그려서 보여주는 기능 제공
+- 영화 출연/제작자, 영화에 대한 코멘트, 영화 사진 정보 슬라이더로 제공
 
-`git pull origin master`
+### 콜렉션 페이지
 
-7. feature 브랜치로 다시 이동해서 master branch merge하기
+- 콜렉션에 해당하는 영화 포스터와 제목 제공
+- 해당 영화를 서비스 하는 ott업체의 로고를 포스터 위에 표시하여 제공
 
-`git checkout feature/페이지 or 기능`
+### 사용자 프로필 페이지
 
-`git merge master`
-
-8. 자기 코드에 이상이 없는지 확인 후에 add, commit, push 하기
-
-`git add .`
-
-`git commit -m "ADD : 적용된 내용"`
-
-`git push origin feature/페이지 or 기능`
-
-9. github에서 PR(Pull Request) 보내기
-
-10. 다시 3번부터 무한 반복...
-
-## 작업 시 주의 사항
-
-1. <i><b>자기 브랜치에서만 작업하기</b></i>
-
-2. <i><b>add 전에 master 브랜치 업데이트 여부 확인</b></i>
-
-3. <i><b>커밋 메세지 가이드라인 지키기</b></i>
-
-`git commit -m "ADD : 적용된 내용"`
-
-[참고) Commit Message Guidelines](https://www.notion.so/Commit-Message-Guidelines-8ca8fac8178943e78ddcfb48f47ba973)
-
-4. <i><b>push 할 때 feature 브랜치에서 push하는 건지 확인하기</b></i>
+- 사용자가 별점을 주었거나 코멘트를 한 영화들의 포스터와 제목 정보 제공
+- 영화 포스트 클릭 시 해당 영화 상세 페이지로 이동
