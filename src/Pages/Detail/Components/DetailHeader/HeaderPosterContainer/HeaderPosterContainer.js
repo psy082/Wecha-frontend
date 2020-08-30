@@ -25,7 +25,7 @@ class HeaderPosterContainer extends Component {
           <div
             className="blurPoster"
             style={{
-              background: `url(${background}) no-repeat center`,
+              backgroundImage: `url(${background}) no-repeat center`,
               backgroundSize: "cover",
             }}
           >
