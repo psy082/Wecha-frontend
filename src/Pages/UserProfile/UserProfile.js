@@ -38,6 +38,10 @@ class UserProfile extends Component {
     }
   }
 
+  goToContens = (id) => {
+    this.props.history.push(`/contents/${id}`);
+  };
+
   render() {
     return (
       <div className="UserProfile">
@@ -67,7 +71,7 @@ class UserProfile extends Component {
               {this.state.movies.map((el) => {
                 return (
                   <ul className="movie" key={el.title}>
-                    <li>
+                    <li onClick={() => this.goToContens(el.film_id)}>
                       <img className="poster" alt="movie" src={el.poster_url} />
                       <div className="title">{el.title}</div>
                       <div className="rating">평가함 ★ {el.rating}</div>

@@ -1,170 +1,411 @@
+// @import "../../Styles/common.scss";
+
+// .Nav {
+//   z-index: 50;
+//   display: flex;
+//   justify-content: center;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 62px;
+//   width: 100%;
+//   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 0px 0px;
+//   background-color: $white;
+//   transition: background-color 200ms ease 0s;
+
+//   .navContainer {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 1320px;
+
+//     .navLeft,
+//     .navRight {
+//       display: flex;
+//       align-items: center;
+
+//       li {
+//         list-style-type: none;
+//         margin-left: 24px;
+
+//         .logo {
+//           width: 151px;
+//           margin: 4px 0 0 -24px;
+//           cursor: pointer;
+//         }
+
+//         .btn,
+//         .loginBtn,
+//         .reviewBtn {
+//           margin: 2px 0 0px 0;
+//           font-size: 15px;
+//           letter-spacing: -0.3px;
+//           color: rgb(126, 126, 126);
+//           background: none;
+//           border: none;
+//           cursor: pointer;
+
+//           &:focus {
+//             outline: none;
+//           }
+//         }
+
+//         .loginBtn,
+//         .reviewBtn {
+//           font-size: 14px;
+//         }
+
+//         .btnActive {
+//           margin: 2px 0 0px 0;
+//           font-size: 15px;
+//           letter-spacing: -0.3px;
+//           color: #353535;
+//           background: none;
+//           border: none;
+//           cursor: pointer;
+
+//           &:focus {
+//             outline: none;
+//           }
+//         }
+
+//         .searchContainer {
+//           @include center;
+//           width: 300px;
+//           height: 62px;
+
+//           .label {
+//             @include center;
+//             width: 300px;
+//             height: 38px;
+//             padding: 0 10px 0 34px;
+//             background-color: rgb(245, 245, 247);
+//             background-image: url("/images/nav/search_icon.svg");
+//             background-size: 16px;
+//             background-repeat: no-repeat;
+//             background-position: 3.5% 47%;
+
+//             input {
+//               width: 100%;
+//               height: 24px;
+//               font-size: 14px;
+//               font-weight: 400;
+//               border: none;
+//               background: none;
+
+//               &::placeholder {
+//                 letter-spacing: -0.3px;
+//                 font-family: "Roboto", "Noto Sans KR", sans-serif;
+//                 font-size: 14px;
+//               }
+
+//               &:focus {
+//                 outline: none;
+//               }
+//             }
+//           }
+//         }
+
+//         .signUpBtn {
+//           width: auto;
+//           min-width: 72px;
+//           height: 32px;
+//           border-radius: 6px;
+//           padding: 5px 14px 6px;
+//           text-align: center;
+//           font-weight: 500;
+//           font-size: 14px;
+//           letter-spacing: -0.3px;
+//           line-height: 23px;
+//           border-width: 1px;
+//           border-style: solid;
+//           border-color: rgba(116, 116, 123, 0.5);
+//           border-image: initial;
+//           background: transparent;
+//           color: rgb(53, 53, 53);
+//           cursor: pointer;
+
+//           &:focus {
+//             outline: none;
+//           }
+//         }
+
+//         .logoutBtn {
+//           width: auto;
+//           min-width: 72px;
+//           height: 32px;
+//           border-radius: 6px;
+//           padding: 5px 14px 6px;
+//           text-align: center;
+//           font-weight: 500;
+//           font-size: 14px;
+//           letter-spacing: -0.3px;
+//           line-height: 23px;
+//           border-width: 1px;
+//           border-style: solid;
+//           border-color: rgba(116, 116, 123, 0.5);
+//           border-image: initial;
+//           background: transparent;
+//           color: rgb(53, 53, 53);
+//           cursor: pointer;
+
+//           &:focus {
+//             outline: none;
+//           }
+//         }
+
+//         .profileBtn {
+//           background: none;
+//           outline: none;
+//           cursor: pointer;
+
+//           img {
+//             width: 28px;
+//             height: 28px;
+//             border-radius: 50%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
 @import "../../Styles/common.scss";
-
 .Nav {
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 62px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 0px 0px;
+  background-color: $white;
+  transition: background-color 200ms ease 0s;
+  .navContainer {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 62px;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 0px 0px;
-    background-color: $white;
-    transition: background-color 200ms ease 0s;
-
-    .navContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 1320px;
-
-        .navLeft,
-        .navRight {
-            display: flex;
-            align-items: center;
-
-            li {
-                list-style-type: none;
-                margin-left: 24px;
-
-                .logo {
-                    width: 151px;
-                    margin: 4px 0 0 -24px;
-                    cursor: pointer;
-                }
-
-                .btn,
-                .loginBtn,
-                .reviewBtn {
-                    margin: 2px 0 0px 0;
-                    font-size: 15px;
-                    letter-spacing: -0.3px;
-                    color: rgb(126, 126, 126);
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .loginBtn,
-                .reviewBtn {
-                    font-size: 14px;
-                }
-
-                .btnActive {
-                    margin: 2px 0 0px 0;
-                    font-size: 15px;
-                    letter-spacing: -0.3px;
-                    color: #353535;
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .searchContainer {
-                    @include center;
-                    width: 300px;
-                    height: 62px;
-
-                    .label {
-                        @include center;
-                        width: 300px;
-                        height: 38px;
-                        padding: 0 10px 0 34px;
-                        background-color: rgb(245, 245, 247);
-                        background-image: url("/images/nav/search_icon.svg");
-                        background-size: 16px;
-                        background-repeat: no-repeat;
-                        background-position: 3.5% 47%;
-
-                        input {
-                            width: 100%;
-                            height: 24px;
-                            font-size: 14px;
-                            font-weight: 400;
-                            border: none;
-                            background: none;
-
-                            &::placeholder {
-                                letter-spacing: -0.3px;
-                                font-family: "Roboto", "Noto Sans KR", sans-serif;
-                                font-size: 14px;
-                            }
-
-                            &:focus {
-                                outline: none;
-                            }
-                        }
-                    }
-                }
-
-                .signUpBtn {
-                    width: auto;
-                    min-width: 72px;
-                    height: 32px;
-                    border-radius: 6px;
-                    padding: 5px 14px 6px;
-                    text-align: center;
-                    font-weight: 500;
-                    font-size: 14px;
-                    letter-spacing: -0.3px;
-                    line-height: 23px;
-                    border-width: 1px;
-                    border-style: solid;
-                    border-color: rgba(116, 116, 123, 0.5);
-                    border-image: initial;
-                    background: transparent;
-                    color: rgb(53, 53, 53);
-                    cursor: pointer;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .logoutBtn {
-                    width: auto;
-                    min-width: 72px;
-                    height: 32px;
-                    border-radius: 6px;
-                    padding: 5px 14px 6px;
-                    text-align: center;
-                    font-weight: 500;
-                    font-size: 14px;
-                    letter-spacing: -0.3px;
-                    line-height: 23px;
-                    border-width: 1px;
-                    border-style: solid;
-                    border-color: rgba(116, 116, 123, 0.5);
-                    border-image: initial;
-                    background: transparent;
-                    color: rgb(53, 53, 53);
-                    cursor: pointer;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                .profileBtn {
-                    background: none;
-                    outline: none;
-                    cursor: pointer;
-
-                    img {
-                        width: 28px;
-                        height: 28px;
-                        border-radius: 50%;
-                    }
-                }
-            }
+    justify-content: space-between;
+    align-items: center;
+    width: 1320px;
+    .navLeft,
+    .navRight {
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+        margin-left: 24px;
+        .logo {
+          width: 151px;
+          margin: 4px 0 0 -24px;
+          cursor: pointer;
         }
+        .btn,
+        .loginBtn,
+        .reviewBtn {
+          margin: 2px 0 0px 0;
+          font-size: 15px;
+          letter-spacing: -0.3px;
+          color: rgb(126, 126, 126);
+          background: none;
+          border: none;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+        .loginBtn,
+        .reviewBtn {
+          font-size: 14px;
+        }
+        .btnActive {
+          margin: 2px 0 0px 0;
+          font-size: 15px;
+          letter-spacing: -0.3px;
+          color: #353535;
+          background: none;
+          border: none;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+        .searchContainer {
+          @include center;
+          width: 300px;
+          height: 62px;
+          .label {
+            @include center;
+            width: 300px;
+            height: 38px;
+            padding: 0 10px 0 34px;
+            background: rgb(245, 245, 247);
+            background-image: url("/images/nav/search_icon.svg");
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: 3.5% 47%;
+            input {
+              width: 100%;
+              height: 24px;
+              font-size: 14px;
+              font-weight: 400;
+              border: none;
+              background: none;
+              &::placeholder {
+                letter-spacing: -0.3px;
+                font-family: "Roboto", "Noto Sans KR", sans-serif;
+                font-size: 14px;
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+        .signUpBtn {
+          width: auto;
+          min-width: 72px;
+          height: 32px;
+          border-radius: 6px;
+          padding: 5px 14px 6px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: -0.3px;
+          line-height: 23px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(116, 116, 123, 0.5);
+          border-image: initial;
+          background: transparent;
+          color: rgb(53, 53, 53);
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+        .logoutBtn {
+          width: auto;
+          min-width: 72px;
+          height: 32px;
+          border-radius: 6px;
+          padding: 5px 14px 6px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: -0.3px;
+          line-height: 23px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(116, 116, 123, 0.5);
+          border-image: initial;
+          background: transparent;
+          color: rgb(53, 53, 53);
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+        .profileBtn {
+          background: none;
+          outline: none;
+          cursor: pointer;
+          img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+          }
+        }
+      }
     }
+  }
+}
+@media screen and (max-width: 894px) {
+  .logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 743px) {
+  .navContainer {
+    background: rgb(245, 245, 247);
+    .search {
+      margin-right: -20px;
+      animation-name: hideNav;
+      animation-duration: 500ms;
+      -webkit-animation-fill-mode: both;
+      cursor: pointer;
+      input {
+        width: 100%;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        background: none;
+        animation-name: fadeOut;
+        animation-duration: 500ms;
+        -webkit-animation-fill-mode: both;
+      }
+    }
+    .loginBtn,
+    .signUpBtn,
+    .reviewBtn,
+    .profileBtn {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 744px) {
+  .search {
+    animation-name: showNav;
+    animation-duration: 500ms;
+    -webkit-animation-fill-mode: both;
+    cursor: pointer;
+    input {
+      width: 100%;
+      height: 24px;
+      font-size: 14px;
+      font-weight: 400;
+      border: none;
+      background: none;
+      animation-name: fadeIn;
+      animation-duration: 500ms;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+}
+@keyframes hideNav {
+  from {
+    width: 300px;
+    height: 62px;
+  }
+  to {
+    width: 0;
+    height: 62px;
+  }
+}
+@keyframes showNav {
+  from {
+    width: 0;
+    height: 62px;
+  }
+  to {
+    width: 300px;
+    height: 62px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
