@@ -136,6 +136,7 @@ class Nav extends Component {
   };
 
   componentDidMount() {
+    localStorage.setItem("access_token", "abcdefghijk");
     const token = localStorage.getItem("access_token");
     if (token) {
       fetch(`${API}/user/info`, {

@@ -40,52 +40,41 @@ class SelfRating extends Component {
       <div className="SelfRating">
         <div className="titleByRating">{titleByRating[Number(rating)]}</div>
         <div className="starContainer" onMouseLeave={this.initWidth}>
-          <div className="unratedStars">
-            {Array(5)
-              .fill()
-              .map((_, index) => (
-                <span
-                  key={`unratedStar${index}`}
-                  className="startImage"
-                  onMouseMove={(e) => this.traceMouse(e, index + 1)}
-                  onClick={(e) => {
-                    if (localStorage.getItem("access_token"))
-                      this.giveRating(e, index + 1);
-                    else {
-                      this.initWidth();
-                      openRejectModal("rating");
-                    }
-                  }}
-                ></span>
-              ))}
-          </div>
-          <div
-            className="ratedStars"
-            style={{ width: `${this.state.widthByRating}` }}
-          >
-            {Array(5)
-              .fill()
-              .map((_, index) => (
-                <span
-                  key={`ratedStar${index}`}
-                  className="startImage"
-                  onMouseMove={(e) => this.traceMouse(e, index + 1)}
-                  onClick={(e) => {
-                    if (localStorage.getItem("access_token"))
-                      this.giveRating(e, index + 1);
-                    else {
-                      this.initWidth();
-                      openRejectModal("rating");
-                    }
-                  }}
-                ></span>
-              ))}
-          </div>
+          {[StarImg.UNRATED, StarImg.RATED].map(stars => 
+            <div key={`${stars}`} className={`${stars}`} 
+              style={ stars === StarImg.RATED 
+                ? { width: `${this.state.widthByRating}` }
+                : {}}
+            >
+              {Array(5)
+                .fill()
+                .map((_, index) => (
+                  <span
+                    key={`${stars}${index}`}
+                    className="startImage"
+                    onMouseMove={(e) => this.traceMouse(e, index + 1)}
+                    onClick={(e) => {
+                      if (localStorage.getItem("access_token"))
+                        this.giveRating(e, index + 1);
+                      else {
+                        this.initWidth();
+                        openRejectModal("rating");
+                      }
+                    }}
+                  />
+                ))}
+            </div>
+          )}
         </div>
       </div>
     );
   }
 }
+
+const StarImg = Object.freeze({
+  UNRATED: 'unratedStars',
+  RATED: 'ratedStars'
+})
 
 const titleByRating = {
   0.0: "평가하기",
